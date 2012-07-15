@@ -1,0 +1,182 @@
+@charset "utf-8";
+/* Metroui-mini by Erick Rodriguez */
+
+
+/*basic metro styles input boxes*/
+
+input[type=text], input[type=password],
+input[type=email], input[type=number],
+input[type=tel],  input[type=url],
+input[type=search], input[type=file], textarea, 
+.win-textarea, select{
+	padding: 5px 0px;
+	min-height:0px !important;
+}
+a{
+	cursor:pointer;
+	cursor:hand;
+}
+
+
+/* MetroUI-Icon */
+.metroui-icon-black, .metroui-icon-white, .metroui-icon-green, .metroui-icon-blue{
+	width: 26px;
+	height: 26px;
+	background-repeat: no-repeat;
+    display: block;
+	float:left;
+    overflow: hidden;
+    text-indent: -99999px;
+}
+
+.metroui-icon-black{
+	background-image:
+	url(../img/metroui-icon-black.png)
+}
+
+.metroui-icon-white{
+	background-image:
+	url(../img/metroui-icon-white.png)
+}
+
+.metroui-icon-green{
+	background-image:
+	url(../img/metroui-icon-green.png)
+}
+
+.metroui-icon-blue{
+	background-image:
+	url(../img/metroui-icon-blue.png)
+}
+
+/*gui-map*/
+.metroui-icon-arrowdown		{background-position:0px 0px;}
+.metroui-icon-arrowright	{background-position:-26px 0px;}
+.metroui-icon-arrowup		{background-position:-52px 0px;}
+.metroui-icon-arrowleft		{background-position:-78px 0px;}
+.metroui-icon-print			{background-position:-104px 0px;}
+.metroui-icon-edit			{background-position:-130px 0px;}
+.metroui-icon-gears1		{background-position:-156px 0px;}
+.metroui-icon-warning		{background-position:-182px 0px;}
+.metroui-icon-pederastian	{background-position:-208px 0px;}
+.metroui-icon-halthand		{background-position:-234px 0px;}
+
+.metroui-icon-file			{background-position:0px -26px;}
+.metroui-icon-folder		{background-position:-26px -26px;}
+.metroui-icon-search		{background-position:-52px -26px;}
+.metroui-icon-plus			{background-position:-78px -26px;}
+.metroui-icon-minus			{background-position:-104px -26px;}
+.metroui-icon-trashbin		{background-position:-130px -26px;}
+.metroui-icon-gears2		{background-position:-156px -26px;}
+.metroui-icon-dialog		{background-position:-182px -26px;}
+.metroui-icon-user1			{background-position:-208px -26px;}
+.metroui-icon-user2			{background-position:-234px -26px;}
+
+.metroui-icon-check			{background-position:0px -52px;}
+.metroui-icon-refresh		{background-position:-26px -52px;}
+.metroui-icon-diskette		{background-position:-52px -52px;}
+.metroui-icon-poweroff		{background-position:-78px -52px;}
+.metroui-icon-restart		{background-position:-104px -52px;}
+.metroui-icon-pause1		{background-position:-130px -52px;}
+.metroui-icon-pause2		{background-position:-156px -52px;}
+.metroui-icon-lockon		{background-position:-182px -52px;}
+.metroui-icon-lockoff		{background-position:-208px -52px;}
+.metroui-icon-bocine1		{background-position:-234px -52px;}
+
+.metroui-icon-home			{background-position:0px -78px;}
+.metroui-icon-recycle		{background-position:-26px -78px;}
+.metroui-icon-video			{background-position:-52px -78px;}
+.metroui-icon-bolddown		{background-position:-78px -78px;}
+.metroui-icon-boldlright	{background-position:-104px -78px;}
+.metroui-icon-boldup		{background-position:-130px -78px;}
+.metroui-icon-boldleft		{background-position:-156px -78px;}
+.metroui-icon-map			{background-position:-182px -78px;}
+.metroui-icon-passin		{background-position:-208px -78px;}
+.metroui-icon-passout		{background-position:-234px -78px;}
+
+.metroui-icon-signal0		{background-position:0px -104px;}
+.metroui-icon-signal1		{background-position:-26px -104px;}
+.metroui-icon-signal2		{background-position:-52px -104px;}
+.metroui-icon-signal3		{background-position:-78px -104px;}
+.metroui-icon-reload		{background-position:-104px -104px;}
+.metroui-icon-card			{background-position:-130px -104px;}
+.metroui-icon-facebook		{background-position:-156px -104px;}
+.metroui-icon-twitter		{background-position:-182px -104px;}
+.metroui-icon-googleplus	{background-position:-208px -104px;}
+.metroui-icon-linkedin		{background-position:-234px -104px;}
+
+.metroui-icon-circle-check			{background-position:0px -130px;}
+.metroui-icon-circle-plus			{background-position:-26px -130px;}
+.metroui-icon-circle-minus			{background-position:-52px -130px;}
+.metroui-icon-circle-cross			{background-position:-78px -130px;}
+.metroui-icon-circle-exclamation1	{background-position:-104px -130px;}
+.metroui-icon-circle-exclamation2	{background-position:-130px -130px;}
+.metroui-icon-circle-boldclose		{background-position:-156px -130px;}
+.metroui-icon-circle-boldplus		{background-position:-182px -130px;}
+.metroui-icon-circle-boldcheck		{background-position:-208px -130px;}
+.metroui-icon-circle-boldminus		{background-position:-234px -130px;}
+
+.metroui-icon-circle-boldleft		{background-position:0px -156px;}
+.metroui-icon-circle-boldup			{background-position:-26px -156px;}
+.metroui-icon-circle-boldright		{background-position:-52px -156px;}
+.metroui-icon-circle-bolddown		{background-position:-78px -152px;}
+.metroui-icon-circle-arrowleft		{background-position:-104px -156px;}
+.metroui-icon-circle-arrowdown		{background-position:-130px -156px;}
+.metroui-icon-circle-arrowright		{background-position:-156px -156px;}
+.metroui-icon-circle-arrowup		{background-position:-182px -156px;}
+.metroui-icon-circle-boldrefresh	{background-position:-208px -156px;}
+.metroui-icon-circle-boldcrossclose	{background-position:-234px -156px;}
+
+.metroui-icon-circle-backward		{background-position:0px -182px;}
+.metroui-icon-circle-previous		{background-position:-26px -182px;}
+.metroui-icon-circle-play			{background-position:-52px -182px;}
+.metroui-icon-circle-next			{background-position:-78px -182px;}
+.metroui-icon-circle-stop			{background-position:-104px -182px;}
+.metroui-icon-circle-forward		{background-position:-130px -182px;}
+.metroui-icon-circle-edit			{background-position:-156px -182px;}
+.metroui-icon-circle-empty			{background-position:-182px -182px;}
+.metroui-icon-circle-empty			{background-position:-208px -182px;}
+.metroui-icon-circle-gear			{background-position:-234px -182px;}
+
+.metroui-icon-circle-checkboxes		{background-position:0px -208px;}
+.metroui-icon-circle-empty			{background-position:-26px -208px;}
+.metroui-icon-circle-empty			{background-position:-52px -208px;}
+.metroui-icon-circle-empty			{background-position:-78px -208px;}
+.metroui-icon-circle-empty			{background-position:-104px -208px;}
+.metroui-icon-circle-boldplay		{background-position:-130px -208px;}
+.metroui-icon-circle-boldpause		{background-position:-156px -208px;}
+.metroui-icon-circle-boldstop		{background-position:-182px -208px;}
+.metroui-icon-circle-diskette		{background-position:-208px -208px;}
+.metroui-icon-circle-tools			{background-position:-234px -208px;}
+
+.metroui-icon-circle-denied			{background-position:0px -234px;}
+.metroui-icon-circle-lightplus		{background-position:-26px -234px;}
+.metroui-icon-circle-lightminus		{background-position:-52px -234px;}
+.metroui-icon-circle-bin1			{background-position:-78px -234px;}
+.metroui-icon-circle-bin2			{background-position:-104px -234px;}
+.metroui-icon-circle-pendelete		{background-position:-130px -234px;}
+.metroui-icon-circle-zoomplus		{background-position:-156px -234px;}
+.metroui-icon-circle-zoom			{background-position:-182px -234px;}
+.metroui-icon-circle-zoomninus		{background-position:-208px -234px;}
+.metroui-icon-circle-search			{background-position:-234px -234px;}
+
+/*Very Especific jQueryUI Fixes*/
+
+/*tabs*/
+.ui-helper-clearfix {display:inline-block !important;width:100% !important;}
+.ui-helper-clearfix:after{clear:none;}
+.ui-tabs-nav {background:none;}
+.ui-tabs.ui-widget-content {background: none repeat scroll 0 0 transparent  !important;}
+
+/* dialog */
+.ui-dialog{border:none !important}
+.ui-dialog .ui-dialog-titlebar {background-color:#fff !important; color:rgba(0,0,0,0.5) !important; font-size:1.9em !important; padding:0.5em 15% !important; cursor:default !important}
+.ui-dialog .ui-widget-content {background-color:#fff !important}
+.ui-widget-overlay {background-color:#777 !important;}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {padding-left:15% !important;padding-right:15%!important;}
+/*especific for wizard dialog component*/
+.wizard * {font-size:12px !important}
+.wizard td {padding :0px 5px 0px 0px}
+.wizard .wizard-buttons{text-align:right !important; margin:0.5em 0em}
+.wizard input[type=text], wizard label{display:block; width:100%}
+

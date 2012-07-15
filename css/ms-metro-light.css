@@ -1,0 +1,456 @@
+html,body{height:100%;width:100%;margin:0;-ms-user-select:none;cursor:default}
+body{-ms-content-zooming:none;overflow:auto}
+iframe{border:0}
+@font-face{font-family:"Segoe UI";font-weight:200;src:local("Segoe UI Light")}
+@font-face{font-family:"Segoe UI";font-weight:300;src:local("Segoe UI Semilight")}
+@font-face{font-family:"Segoe UI";font-weight:400;src:local("Segoe UI")}
+@font-face{font-family:"Segoe UI";font-weight:600;src:local("Segoe UI Semibold")}
+@font-face{font-family:"Segoe UI";font-weight:700;src:local("Segoe UI Bold")}
+@font-face{font-family:"Segoe UI";font-style:italic;font-weight:400;src:local("Segoe UI Italic")}
+@font-face{font-family:"Segoe UI";font-style:italic;font-weight:700;src:local("Segoe UI Bold Italic")}
+h1,.win-type-xx-large{font-size:42pt;font-weight:200;line-height:1.1429}
+h2,.win-type-x-large{font-size:20pt;font-weight:200;line-height:1.2}
+h3,.win-type-large{font-size:11pt;font-weight:600;line-height:1.3636}
+h4,.win-type-medium,code,pre,samp{font-size:11pt;font-weight:400;line-height:1.3636}
+body,h5,.win-type-small,legend{font-size:11pt;font-weight:300;line-height:1.3636}
+.win-type-x-small{font-size:11pt;font-weight:300;line-height:1.3636}
+h6,caption,figcaption,small,.win-type-xx-small{font-size:9pt;font-weight:400;line-height:1.6667}
+h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:0}
+.win-type-ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+h1.win-type-ellipsis,.win-type-xx-large.win-type-ellipsis{line-height:1.4286}
+h2.win-type-ellipsis,.win-type-x-large.win-type-ellipsis{line-height:1.5}
+dt,th{font-size:11pt;font-weight:700;line-height:1.3636}
+abbr,acronym,address,blockquote,cite,dl,dd,li,ol,p,q,td,tr{font-weight:300}
+b,strong{font-weight:700}
+em{font-style:italic}
+@media(-ms-view-state:snapped){h1,.win-type-xx-large{font-size:20pt;font-weight:200;line-height:1.2}
+h2,.win-type-x-large{font-size:11pt;font-weight:600;line-height:1.3636}
+h3,.win-type-large{font-size:11pt;font-weight:400;line-height:1.3636}
+h1.win-type-ellipsis,.win-type-xx-large.win-type-ellipsis{line-height:1.5}
+h2.win-type-ellipsis,.win-type-x-large.win-type-ellipsis{line-height:1.3636}
+}
+body,button,input,textarea,.win-textarea,select,option{letter-spacing:.02em}
+code,pre,samp{font-family:"Consolas"}
+textarea,.win-textarea{width:260px;height:39px;padding:4px 8px;overflow-y:scroll;word-wrap:break-word}
+input[type=text],input[type=password],input[type=email],input[type=number],input[type=tel],input[type=url],input[type=search],textarea,.win-textarea{width:276px;min-height:28px;min-width:64px;margin:4px 0;padding:0;border-width:2px;border-style:solid;background-clip:padding-box;font-size:11pt;font-weight:400;line-height:1.3636;border-color:#ccc}
+input::-ms-value{margin:4px 8px}
+input::-ms-clear,input::-ms-reveal{display:inline-block;margin-left:2px}
+button,input[type=button],input[type=reset],input[type=submit]{min-height:32px;min-width:90px;padding:4px 8px;border-width:2px;border-style:solid;background-clip:padding-box;font-size:11pt;font-weight:600;line-height:1.3636;border-color:#ccc;background-color:#ccc}
+input[type=file]{border:0;min-width:100px;min-height:20px;width:340px;height:32px;padding:0;margin:7px 8px 21px 8px;background-clip:padding-box}
+input[type=file]::-ms-value{margin:0;border-width:2px;border-style:solid;border-right-style:none;border-radius:0;background-clip:padding-box;font-size:11pt;font-weight:400;line-height:1.3636}
+input[type=file]::-ms-browse{margin:0;padding:0 18px;border-width:2px;border-style:solid;background-clip:padding-box;font-size:11pt;font-weight:600;line-height:1.3636}
+a{text-decoration:none;cursor:default}
+img{border-style:none}
+select{min-height:20px;min-width:80px;border-width:2px;border-style:solid;background-clip:padding-box;margin:4px 0;font-size:11pt;font-weight:400;line-height:1.3636}
+select::-ms-value{padding:4px 8px;margin:0}
+select::-ms-expand{border:0;padding-left:6px;padding-right:6px;background-color:transparent}
+input::-ms-check{border-width:2px;border-style:solid;display:inline-block;background-clip:padding-box}
+
+input[type=radio]{width:23px;height:23px;margin-left:-1px;margin-right:3px;margin-bottom:-2px}
+input[type=checkbox]{width:21px;height:21px;margin-right:5px}
+input[type=range]{width:280px;height:auto;padding:17px 0 32px 0}
+input[type=range]::-ms-track{padding:0;width:auto;height:11px;border-style:none;color:transparent}
+input[type=range]::-ms-thumb{width:11px;height:11px;border-style:none}
+input[type=range]::-ms-ticks-before,input[type=range]::-ms-ticks-after{width:100%;height:5px;display:none}
+input[type=range]:disabled::-ms-fill-lower{margin-right:5px}
+input[type=range]:disabled::-ms-fill-upper{margin-left:6px}
+input[type=range].win-vertical{width:auto;height:191px;padding:0 17px;writing-mode:bt-lr}
+input[type=range].win-vertical::-ms-track{width:11px;height:auto}
+input[type=range].win-vertical:disabled::-ms-fill-lower{margin-right:0;margin-top:6px}
+input[type=range].win-vertical:disabled::-ms-fill-upper{margin-left:0;margin-bottom:5px}
+input[type=range].win-vertical::-ms-ticks-before,input[type=range].win-vertical::-ms-ticks-after{width:5px;height:100%;display:none}
+progress{width:180px;height:6px;border-style:none}
+progress.win-medium{width:280px}
+progress.win-large{width:100%}
+progress::-ms-fill{border-style:none}
+progress:indeterminate{height:4px;padding:1px 0}
+@-ms-keyframes win-progress-fade-out{from{opacity:1.0}
+to{opacity:.5}
+}
+progress.win-paused:not(:indeterminate){-ms-animation-name:win-progress-fade-out;-ms-animation-duration:3s;-ms-animation-timing-function:cubic-bezier(0.03,0.76,0.31,1.0);opacity:.5}
+progress.win-error::-ms-fill{background-color:transparent}
+progress.win-ring:indeterminate::-ms-fill{-ms-animation-name:-ms-ring}
+progress.win-ring{width:20px;height:20px}
+progress.win-medium.win-ring{width:40px;height:40px}
+progress.win-large.win-ring{width:60px;height:60px}
+form{margin:0;padding:0}
+legend{margin:0 0 10px 0;padding:0;color:inherit}
+@font-face{font-family:"Segoe UI Command";src:local("Segoe UI Symbol");font-weight:normal;font-style:normal}
+.win-appbarclickeater{z-index:1000;opacity:0;background-color:Purple;display:none;width:100%;height:100%;left:0;top:0;position:fixed}
+.win-flyoutmenuclickeater{z-index:1002;opacity:0;background-color:Purple;display:none;width:100%;height:100%;left:0;top:0;position:fixed}
+.win-backbutton{display:inline-block;min-width:0;min-height:0;background-clip:border-box;box-sizing:border-box;border-radius:50%;border-width:2px;border-style:solid;padding:0;text-align:center;width:41px;height:41px;font-size:14pt;line-height:37px;vertical-align:baseline}
+.win-backbutton:hover,.win-backbutton:hover:active{border-width:2px;border-style:solid;border-radius:50%}
+.win-backbutton::before{font-family:"Segoe UI Symbol";font-weight:normal;content:"\E0D5";vertical-align:50%}
+.win-backbutton:disabled,.win-backbutton:disabled:active{background-clip:padding-box;visibility:hidden}
+@media(-ms-view-state:snapped){.win-backbutton{width:30px;height:30px;font-size:10pt;line-height:26px;vertical-align:-0.37em}
+}
+button.win-command{background:0;height:auto;padding:12px 0;margin:2px;border:0;min-width:40px;text-align:center;font-size:9pt;line-height:16px;font-weight:normal;writing-mode:lr-tb}
+button.win-command:focus{outline:2px solid}
+button.win-hidefocus:focus{outline:0}
+.win-commandicon{display:inline-block;margin:0 28px;min-width:0;min-height:0;padding:0;width:40px;height:40px;box-sizing:border-box;cursor:default}
+.win-commandimage{font-family:"Segoe UI Command";letter-spacing:0;vertical-align:middle;font-size:14pt;margin:-2px;line-height:40px;background-position:0 0;background-origin:border-box;display:inline-block;width:40px;height:40px;background-size:160px 80px}
+button:hover .win-commandimage,button:active .win-commandimage{background-position:-40px 0}
+button:hover:active .win-commandimage{background-position:-80px 0}
+button:disabled .win-commandimage,button:disabled:active .win-commandimage{background-position:-120px 0}
+button[aria-selected=true] .win-commandimage{background-position:0 -40px}
+button[aria-selected=true]:hover .win-commandimage,button[aria-selected=true]:active .win-commandimage{background-position:-40px -40px}
+button[aria-selected=true]:hover:active .win-commandimage{background-position:-80px -40px}
+button[aria-selected=true]:disabled .win-commandimage,button[aria-selected=true]:disabled:active .win-commandimage{background-position:-120px -40px}
+.win-commandring,button:hover .win-commandring,button:active .win-commandring,button.win-command:disabled .win-commandring,button.win-command:disabled:active .win-commandring{border-width:2px;border-style:solid;border-radius:50%;background-clip:border-box}
+button:hover:active .win-commandring,button[aria-selected=true] .win-commandring,button[aria-selected=true]:active .win-commandring,button[aria-selected=true]:disabled .win-commandring,button[aria-selected=true]:disabled:active .win-commandring{background-clip:border-box}
+button.win-command .win-label{position:relative;line-height:20px;display:block;max-width:88px;padding-left:4px;padding-right:4px;overflow:hidden;top:1px;-ms-hyphens:auto}
+hr.win-command{display:inline-block;padding:0;margin:14px 29px 34px 30px;width:1px;height:40px;border:0;vertical-align:top;background-color:#707070}
+.win-appbar{z-index:1001;border-width:0;width:100%;height:auto;left:0;position:fixed}
+.win-commandlayout{text-align:right;padding-left:10px;padding-right:calc(((100%+5px) mod 20px)+5px);width:calc(100% - 10px -(((100%+5px) mod 20px)+5px));font-size:0;min-height:88px}
+.win-commandlayout .win-selection{float:left}
+@media(max-width:1023px){button.win-command .win-label{display:none}
+button.win-command .win-commandicon{margin:0 8px}
+.win-commandlayout{min-height:68px}
+hr.win-command{margin-bottom:14px}
+}
+@media(max-width:320px){.win-commandlayout{padding-right:10px;width:calc(100% - 20px)}
+.win-commandlayout.win-bottom{writing-mode:lr-bt}
+}
+.win-flyout{z-index:1003;position:fixed;padding:25px 20px 20px 20px;border-style:solid;border-width:2px;margin:5px;min-width:30px;-ms-hyphens:auto;min-height:9px;max-width:470px;max-height:calc(100% - 55px);overflow:auto;font-size:11pt;font-weight:400;line-height:1.3636}
+.win-flyout.win-leftalign{margin-left:0}
+.win-flyout.win-rightalign{margin-right:0}
+.win-flyout.win-scrolls{overflow:auto}
+.win-menu{padding:5px 0 7px 0;line-height:33px;text-align:left}
+.win-menu button.win-command{display:block;border:0;padding:0 16px;margin-left:0;margin-right:0;line-height:33px;float:none;background-color:transparent;text-align:left;font-size:11pt;width:100%}
+.win-menu button.win-command:focus{outline:0}
+.win-menu hr.win-command{display:block;height:1px;width:auto;border:0;background-color:#707070;padding:0;margin:11px 16px 8px 16px}
+.win-menu-toggle button.win-command::before{font-family:'Segoe UI Symbol';content:"\E0E7\2003";visibility:hidden;letter-spacing:0}
+.win-menu-toggle button[aria-selected=true].win-command::before{visibility:visible}
+.win-settingsflyout{z-index:1001;border-left-style:solid;border-left-width:2px;position:fixed;top:0;right:0;height:100%;width:346px}
+.win-settingsflyout.win-wide{width:646px}
+.win-settingsflyout .win-header{padding-left:40px;padding-right:40px;padding-top:32px;height:48px}
+.win-settingsflyout .win-backbutton{position:absolute;width:30px;height:30px;font-size:8pt;line-height:26px;margin-top:3px}
+.win-settingsflyout .win-header .win-label{display:inline-block;padding-left:40px;font-size:20pt;line-height:33px}
+.win-settingsflyout .win-content{overflow:auto;padding-left:40px;padding-right:40px;height:calc(100% - 112px)}
+.win-settingsflyout .win-label{font-size:20pt;font-weight:200;line-height:normal}
+.win-rating{display:-ms-inline-box;height:auto;width:auto;-ms-box-align:stretch;-ms-box-pack:center;-ms-touch-action:none}
+.win-rating .win-star{-ms-box-flex:1;height:28px;width:28px;padding:0 6px;font-family:"Segoe UI Symbol";font-size:28px;overflow:hidden;text-indent:0;line-height:1;cursor:default}
+.win-rating.win-small .win-star{width:14px;height:14px;font-size:14px;padding:0 3px}
+.win-rating .win-star:before{content:"\E082"}
+.win-rating .win-star.win-disabled{cursor:default}
+.win-datepicker{display:-ms-inline-box;height:auto;width:auto}
+.win-datepicker .win-datepicker-month{margin-right:20px}
+.win-datepicker .win-datepicker-date.win-order0,.win-datepicker .win-datepicker-date.win-order1{margin-right:20px}
+.win-datepicker .win-datepicker-year.win-order0{margin-right:20px}
+.win-timepicker{display:-ms-inline-box;height:auto;width:auto}
+.win-timepicker select{padding-left:2px}
+.win-timepicker .win-timepicker-hour{margin-right:20px}
+.win-timepicker .win-timepicker-period.win-order0{margin-right:20px}
+.win-timepicker .win-timepicker-minute.win-order1{margin-right:20px}
+.win-toggleswitch{padding:0;background-color:transparent;vertical-align:top;margin:0;display:block}
+.win-toggleswitch .win-switch{display:inline-block;height:19px;width:50px;padding:5px;margin:0;background-color:transparent}
+.win-toggleswitch .win-switch::-ms-tooltip{display:none}
+.win-toggleswitch .win-switch::-ms-ticks-before,.win-toggleswitch .win-switch::-ms-ticks-after{display:none}
+.win-toggleswitch .win-switch::-ms-track{height:15px;width:46px;padding:0;margin:0;border-width:2px;border-style:solid}
+.win-toggleswitch .win-switch::-ms-fill-lower,.win-toggleswitch .win-switch::-ms-fill-upper{height:13px;padding:0}
+.win-toggleswitch .win-switch::-ms-fill-lower{margin-left:1px}
+.win-toggleswitch .win-switch::-ms-thumb{height:19px;width:12px}
+.win-toggleswitch .win-title{display:block;vertical-align:top;max-width:470px;font-size:11pt;font-weight:300;line-height:1.3636}
+.win-toggleswitch .win-label{display:inline-block;width:125px;vertical-align:top;padding:5px 20px 5px 0;min-width:65px;font-size:11pt;font-weight:600;line-height:1.3636}
+.win-tooltip{display:block;position:fixed;top:30px;left:30px;max-width:30em;margin:0;padding:7px 12px 8px 12px;border-style:solid;border-width:2px;z-index:9999;word-wrap:break-word;-ms-animation-fill-mode:both}
+.win-tooltip-phantom{display:block;position:fixed;top:30px;left:30px;background-color:transparent;border-width:0;margin:0;padding:0}
+.win-viewbox{width:100%;height:100%;position:relative}
+.win-semanticzoom{height:400px;-ms-touch-action:none}
+.win-semanticzoomactive *{-ms-touch-action:inherit}
+.win-scrollview{overflow-x:auto;overflow-y:hidden;height:400px;width:100%}
+.win-listview{overflow:hidden;height:400px}
+.win-listview .win-surface{position:relative;overflow:visible;width:100%;height:100%}
+.win-listview>.win-viewport{position:relative;width:100%;height:100%;z-index:0}
+.win-listview>.win-viewport.win-horizontal{overflow-x:auto;overflow-y:hidden}
+.win-listview>.win-viewport.win-vertical{overflow-x:hidden;overflow-y:auto}
+.win-listview>.win-horizontal .win-container{margin:4px}
+.win-listview>.win-vertical .win-container{margin:4px 24px 4px 7px}
+.win-listview.win-rtl>.win-vertical .win-container{margin:4px 7px 4px 24px}
+.win-listview .win-container{cursor:default;position:absolute}
+.win-swipeable .win-container{-ms-touch-action:none}
+.win-interactive{-ms-touch-action:auto}
+.win-listview .win-item{z-index:1}
+.win-listview .win-item,.win-dragimage .win-item{overflow:hidden;position:absolute}
+.win-listview>.win-vertical .win-item{width:100%}
+.win-listview .win-item:focus{outline-style:none}
+.win-listview .win-focusedoutline{width:calc(100%+4px);height:calc(100%+4px);left:-2px;top:-2px;position:absolute;z-index:5}
+.win-dragimage{opacity:.8;overflow:hidden}
+.win-dragoverlay{width:100%;height:100%;opacity:0}
+.win-dragcount{position:absolute;margin:12px;padding:0;vertical-align:top;font-size:42pt;font-weight:200;line-height:26pt}
+.win-container.win-selected .win-selectionborder{border-width:4px;border-style:solid}
+.win-container.win-selected:hover .win-selectionborder{border-width:4px;border-style:solid}
+.win-listview .win-groupheader{position:absolute;top:0;padding:10px 10px 10px 2px;cursor:default;overflow:hidden;margin-left:70px;font-size:20pt;font-weight:200;line-height:1.2}
+.win-listview.win-rtl .win-groupheader{margin-left:0;margin-right:70px;padding-left:10px;padding-right:2px}
+.win-listview.win-groups>.win-horizontal .win-surface{margin-left:-70px}
+.win-listview.win-groups.win-rtl>.win-horizontal .win-surface{margin-left:0;margin-right:-70px}
+.win-surface ._win-proxy{position:absolute;width:0;height:0;-ms-touch-action:none}
+.win-selectionborder{position:absolute;top:0;left:0;right:0;bottom:0;z-index:2}
+.win-selectionbackground{position:absolute;top:0;left:0;right:0;bottom:0;z-index:0}
+.win-selectioncheckmarkbackground{position:absolute;top:0;right:0;width:0;height:0;margin:0;padding:0;border-width:20px;border-style:solid;z-index:3}
+.win-rtl .win-selectioncheckmarkbackground{left:0;right:auto}
+.win-selectioncheckmark{position:absolute;margin:0;padding:2px;right:0;top:0;font-family:Segoe UI Symbol;font-size:11pt;z-index:4}
+.win-rtl .win-selectioncheckmark{left:0;right:auto}
+.win-selectionhint{position:absolute;margin:0;padding:2px;right:0;font-family:Segoe UI Symbol;font-size:11pt;opacity:.5}
+.win-selectionhint.win-revealed{opacity:1}
+.win-rtl .win-selectionhint{left:0;right:auto}
+.win-listview .win-progress{left:50%;top:50%;width:60px;height:60px;margin-left:-30px;margin-top:-30px;z-index:1;position:absolute}
+.win-listview .win-progress::-ms-fill{-ms-animation-name:-ms-ring}
+.win-flipview{overflow:hidden}
+.win-flipview .win-navleft{left:0;top:50%;margin-top:-19px}
+.win-flipview .win-navright{left:100%;top:50%;margin-left:-69px;margin-top:-19px}
+.win-flipview .win-navtop{left:50%;top:0;margin-left:-35px}
+.win-flipview .win-navbottom{left:50%;top:100%;margin-left:-35px;margin-top:-39px}
+.win-flipview .win-navbutton{border:0;width:69px;height:39px;z-index:1;position:absolute;font-family:"Segoe UI Symbol";font-size:16pt;padding:0;min-width:0}
+.win-flipview .win-item,.win-flipview .win-item>.win-template{display:-ms-box;height:100%;width:100%;-ms-box-align:middle;-ms-box-pack:center}
+.win-ui-dark body{color:#fff;background-color:#1d1d1d}
+.win-ui-dark .win-type-interactive:hover{color:#42d2da}
+.win-ui-dark .win-type-interactive:hover:active{color:#52eeff}
+body{color:#000;background-color:#fff}
+.win-type-interactive:hover{color:#329aa3}
+.win-type-interactive:hover:active{color:#25bbc4}
+.win-ui-dark{color:#fff;background-color:#1d1d1d}
+::selection,select:focus::-ms-value{background-color:#008287;color:#fff}
+.win-ui-dark input[type=text],.win-ui-dark input[type=password],.win-ui-dark input[type=email],.win-ui-dark input[type=number],.win-ui-dark input[type=tel],.win-ui-dark input[type=url],.win-ui-dark input[type=search],.win-ui-dark textarea,.win-ui-dark .win-textarea,.win-ui-dark select,.win-ui-dark input::-ms-check{background-color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.8);color:#000}
+.win-ui-dark input[type=text]:hover,.win-ui-dark input[type=password]:hover,.win-ui-dark input[type=email]:hover,.win-ui-dark input[type=number]:hover,.win-ui-dark input[type=tel]:hover,.win-ui-dark input[type=url]:hover,.win-ui-dark input[type=search]:hover,.win-ui-dark textarea:hover,.win-ui-dark .win-textarea:hover,.win-ui-dark select:hover,.win-ui-dark input:hover::-ms-check{background-color:rgba(255,255,255,0.87);border-color:rgba(255,255,255,0.87);color:#000}
+.win-ui-dark input:hover:active::-ms-check{background-color:#fff}
+.win-ui-dark input[type=text]:focus,.win-ui-dark input[type=text]:active,.win-ui-dark input[type=password]:focus,.win-ui-dark input[type=password]:active,.win-ui-dark input[type=email]:focus,.win-ui-dark input[type=email]:active,.win-ui-dark input[type=number]:focus,.win-ui-dark input[type=number]:active,.win-ui-dark input[type=tel]:focus,.win-ui-dark input[type=tel]:active,.win-ui-dark input[type=url]:focus,.win-ui-dark input[type=url]:active,.win-ui-dark input[type=search]:focus,.win-ui-dark input[type=search]:active,.win-ui-dark textarea:focus,.win-ui-dark textarea:active,.win-ui-dark .win-textarea:focus,.win-ui-dark .win-textarea:active,.win-ui-dark select:focus,.win-ui-dark select:active{background-color:#fff;border-color:#fff;color:#000}
+.win-ui-dark input[type=text]:disabled,.win-ui-dark input[type=password]:disabled,.win-ui-dark input[type=email]:disabled,.win-ui-dark input[type=number]:disabled,.win-ui-dark input[type=tel]:disabled,.win-ui-dark input[type=url]:disabled,.win-ui-dark input[type=search]:disabled,.win-ui-dark input[type=file]::-ms-value,.win-ui-dark textarea:disabled,.win-ui-dark .win-textarea:disabled,.win-ui-dark select:disabled,.win-ui-dark input:disabled::-ms-check,.win-ui-dark input:disabled:active::-ms-check{background-color:transparent;border-color:rgba(255,255,255,0.4);color:rgba(255,255,255,0.4)}
+.win-ui-dark input:disabled::-ms-check,.win-ui-dark input:disabled:active::-ms-check{background-color:rgba(255,255,255,0.4)}
+input[type=text],input[type=password],input[type=email],input[type=number],input[type=tel],input[type=url],input[type=search],input[type=file]::-ms-value,select,textarea,.win-textarea,input::-ms-check{background-color:rgba(255,255,255,0.8);border-color:rgb(0,0,0,0.27);color:#000}
+input[type=text]:hover,input[type=password]:hover,input[type=email]:hover,input[type=number]:hover,input[type=tel]:hover,input[type=url]:hover,input[type=search]:hover,textarea:hover,select:hover,.win-textarea:hover,input:hover::-ms-check{background-color:rgba(255,255,255,0.87);border-color:rgba(0,0,0,0.44);color:#000}
+input[type=text]:focus,input[type=text]:active,input[type=password]:focus,input[type=password]:active,input[type=email]:focus,input[type=email]:active,input[type=number]:focus,input[type=number]:active,input[type=tel]:focus,input[type=tel]:active,input[type=url]:focus,input[type=url]:active,input[type=search]:focus,input[type=search]:active,textarea:focus,textarea:active,.win-textarea:focus,.win-textarea:active,select:focus,select:active{background-color:#fff;border-color:rgba(0,0,0,0.6);color:#000}
+input:hover:active::-ms-check{background-color:#000;border-color:#000;color:#fff}
+input[type=text]:disabled,input[type=password]:disabled,input[type=email]:disabled,input[type=number]:disabled,input[type=tel]:disabled,input[type=url]:disabled,input[type=search]:disabled,textarea:disabled,.win-textarea:disabled,select:disabled,input:disabled::-ms-check,input:disabled:active::-ms-check{background-color:rgba(202,202,202,0.4);border-color:rgba(0,0,0,0.15);color:rgba(0,0,0,0.4)}
+input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:rgba(0,0,0,0.6)}
+.win-ui-dark input:disabled:-ms-input-placeholder,.win-ui-dark textarea:disabled:-ms-input-placeholder{color:rgba(255,255,255,0.22)}
+input:disabled:-ms-input-placeholder,textarea:disabled:-ms-input-placeholder{color:rgba(0,0,0,0.22)}
+input::-ms-clear,input::-ms-reveal{background-color:#fff;color:#000}
+input::-ms-clear:hover,input::-ms-reveal:hover{background-color:#dedede}
+input::-ms-clear:hover:active,input::-ms-reveal:hover:active{background-color:#000;color:#fff}
+.win-ui-dark button,.win-ui-dark input[type=button],.win-ui-dark input[type=submit],.win-ui-dark input[type=reset],.win-ui-dark input[type=file]::-ms-browse{background-color:transparent;border-color:#fff;color:#fff}
+.win-ui-dark button[type=submit],.win-ui-dark input[type=submit]{background-color:#008287}
+.win-ui-dark button:hover,.win-ui-dark input[type=button]:hover,.win-ui-dark input[type=reset]:hover,.win-ui-dark input[type=file]::-ms-browse:hover{background-color:rgba(255,255,255,0.13)}
+.win-ui-dark button[type=submit]:hover,.win-ui-dark input[type=submit]:hover{background-color:#219297}
+.win-ui-dark button:hover:active,.win-ui-dark input[type=button]:hover:active,.win-ui-dark input[type=reset]:hover:active,.win-ui-dark input[type=submit]:hover:active,.win-ui-dark input[type=file]::-ms-browse:hover:active{background-color:#fff;color:#000}
+.win-ui-dark button:disabled,.win-ui-dark input[type=button]:disabled,.win-ui-dark input[type=reset]:disabled,.win-ui-dark input[type=submit]:disabled,.win-ui-dark input[type=file]:disabled::-ms-browse,.win-ui-dark button:disabled:active,.win-ui-dark input[type=button]:disabled:active,.win-ui-dark input[type=reset]:disabled:active,.win-ui-dark input[type=submit]:disabled:active,.win-ui-dark input[type=file]:disabled::-ms-browse:active{background-color:transparent;border-color:rgba(255,255,255,0.4);color:rgba(255,255,255,0.4)}
+button,input[type=button],input[type=submit],input[type=reset],input[type=file]::-ms-browse{background-color:rgba(182,182,182,0.7);border-color:rgba(0,0,0,0.2);color:#000}
+button[type=submit],input[type=submit]{background-color:#008287;border-color:#008287;color:#fff}
+button:hover,input[type=button]:hover,input[type=reset]:hover,input[type=file]::-ms-browse:hover{background-color:rgba(205,205,205,0.82);border-color:rgba(164,164,164,0)}
+button[type=button]:hover,input[type=button]:hover{background-color:#bbb;border-color:#bbb}
+button[type=submit]:hover,input[type=submit]:hover{background-color:#219297;border-color:#219297}
+button:hover:active,input[type=button]:hover:active,input[type=reset]:hover:active,input[type=submit]:hover:active,input[type=file]::-ms-browse:hover:active{background-color:#000;border-color:#000;color:#fff}
+button:disabled,input[type=button]:disabled,input[type=reset]:disabled,input[type=submit]:disabled,input[type=file]:disabled::-ms-browse,button:disabled:active,input[type=button]:disabled:active,input[type=reset]:disabled:active,input[type=submit]:disabled:active,input[type=file]:disabled::-ms-browse:active{background-color:rgba(202,202,202,0.4);border-color:rgba(0,0,0,0.08);color:rgba(0,0,0,0.4)}
+input[type=file]{background-color:transparent;border-color:transparent;color:transparent}
+.win-ui-dark a{color:#00b7c0}
+.win-ui-dark a:hover{color:#42d2da}
+.win-ui-dark a:hover:active{color:#52eeff}
+.win-ui-dark a[disabled],.win-ui-dark a[disabled]:active{color:rgba(255,255,255,0.4)}
+a{color:#008287}
+a:hover{color:#329aa3}
+a:hover:active{color:#25bbc4}
+a[disabled],a[disabled]:active{color:rgba(0,0,0,0.4)}
+option{background-color:transparent}
+option:checked{color:#fff;background-color:#008287}
+select option:hover{color:#000;background-color:#c5c5c5}
+select:focus option:hover{color:#000;background-color:#dedede}
+option:checked:hover:not(:active){color:#fff;background-color:#219297}
+select option:active,select:focus option:active{color:#fff;background-color:#000}
+input[type=range],input[type=range]::-ms-track{background-color:transparent}
+input[type=range]::-ms-fill-lower{background-color:#008287}
+input[type=range]:hover::-ms-fill-lower{background-color:#219297}
+input[type=range]:active::-ms-fill-lower{background-color:#25bbc4}
+.win-ui-dark input[type=range]:disabled::-ms-fill-lower{background-color:rgba(255,255,255,0.24)}
+input[type=range]:disabled::-ms-fill-lower{background-color:rgba(0,0,0,0.24)}
+.win-ui-dark input[type=range]::-ms-fill-upper{background-color:rgba(255,255,255,0.35)}
+.win-ui-dark input[type=range]:hover::-ms-fill-upper,.win-ui-dark input[type=range]::-ms-fill-upper:hover{background-color:rgba(255,255,255,0.38)}
+.win-ui-dark input[type=range]:active::-ms-fill-upper,.win-ui-dark input[type=range]::-ms-fill-upper:active{background-color:rgba(255,255,255,0.43)}
+.win-ui-dark input[type=range]:disabled::-ms-fill-upper{background-color:rgba(255,255,255,0.12)}
+input[type=range]::-ms-fill-upper{background-color:rgba(0,0,0,0.19)}
+input[type=range]:hover::-ms-fill-upper,input[type=range]::-ms-fill-upper:hover{background-color:rgba(0,0,0,0.15)}
+input[type=range]:active::-ms-fill-upper,input[type=range]::-ms-fill-upper:active{background-color:rgba(0,0,0,0.11)}
+input[type=range]:disabled::-ms-fill-upper{background-color:rgba(0,0,0,0.1)}
+.win-ui-dark input[type=range]::-ms-thumb{background-color:#fff}
+.win-ui-dark input[type=range]:disabled::-ms-thumb{background-color:#7e7e7e}
+input[type=range]::-ms-thumb{background-color:#000}
+input[type=range]:disabled::-ms-thumb{background-color:#929292}
+.win-ui-dark input[type=range]::-ms-ticks-before,.win-ui-dark input[type=range]::-ms-ticks-after{color:rgba(255,255,255,0.35)}
+input[type=range]::-ms-ticks-before,input[type=range]::-ms-ticks-after{color:rgba(0,0,0,0.19)}
+.win-ui-dark progress{background-color:rgba(255,255,255,0.38);color:#008287}
+progress{background-color:rgba(0,0,0,0.19);color:#008287}
+progress::-ms-fill{background-color:currentColor}
+.win-ui-dark progress:indeterminate,progress:indeterminate{background-color:transparent}
+.win-flipview .win-navbutton{background-color:rgba(213,213,213,0.35);color:rgba(0,0,0,0.60)}
+.win-flipview .win-navbutton:hover{background-color:rgba(215,215,215,0.94);color:rgba(0,0,0,1.0)}
+.win-flipview .win-navbutton:hover:active{background-color:rgba(41,41,41,0.74);color:rgba(255,255,255,1.0)}
+.win-ui-dark .win-listview .win-container:hover{background-color:rgba(255,255,255,0.3);outline:rgba(255,255,255,0.3) solid 3px}
+.win-ui-dark .win-listview .win-focusedoutline{outline:#fff solid 2px}
+.win-listview .win-container:hover{background-color:rgba(0,0,0,0.3);outline:rgba(0,0,0,0.3) solid 3px}
+.win-listview .win-focusedoutline{outline:#000 solid 2px}
+.win-listview .win-container.win-selected:hover{background-color:#219297}
+.win-listview .win-container.win-swipe:hover{background-color:transparent;outline:0}
+.win-listview .win-selected{color:#fff}
+.win-dragoverlay{background-color:#008287}
+.win-container.win-selected .win-selectionborder{border-color:#008287}
+.win-container.win-selected:hover .win-selectionborder{border-color:#219297}
+.win-selected .win-selectionbackground{background-color:#008287}
+.win-selected:hover .win-selectionbackground{background-color:#219297}
+.win-selectioncheckmark{color:#fff}
+.win-selectionhint{color:#008287}
+.win-selectioncheckmarkbackground{border-top-color:#008287;border-right-color:#008287;border-left-color:transparent;border-bottom-color:transparent}
+.win-container.win-selected:hover .win-selectioncheckmarkbackground{border-top-color:#219297;border-right-color:#219297;border-left-color:transparent;border-bottom-color:transparent}
+.win-rtl .win-selectioncheckmarkbackground{border-left-color:#008287;border-right-color:transparent}
+.win-rtl .win-container.win-selected:hover .win-selectioncheckmarkbackground{border-left-color:#219297;border-right-color:transparent}
+.win-ui-dark .win-backbutton{background-color:transparent;border-color:#fff;color:#fff}
+.win-ui-dark .win-backbutton:hover{background-color:rgba(255,255,255,0.13);border-color:#fff}
+.win-ui-dark .win-backbutton:hover:active{background-color:#fff;border-color:#fff;color:#000}
+.win-ui-dark .win-backbutton:disabled,.win-ui-dark .win-backbutton:disabled:active{background-color:transparent;border-color:rgba(255,255,255,0.4);color:rgba(255,255,255,0.4)}
+.win-backbutton{background-color:transparent;border-color:#000;color:#000}
+.win-backbutton:hover{background-color:rgba(0,0,0,0.13);border-color:#000}
+.win-backbutton:hover:active{background-color:#000;border-color:#000;color:#fff}
+.win-backbutton:disabled,.win-backbutton:disabled:active{background-color:transparent;border-color:rgba(0,0,0,0.4);color:rgba(0,0,0,0.4)}
+.win-ui-dark button.win-command:focus{outline-color:#fff}
+button.win-command:focus{outline-color:#000}
+button.win-command:hover{background-color:transparent}
+button.win-command:active{background-color:transparent;color:inherit}
+button.win-command:hover:active{background-color:transparent;color:inherit}
+button.win-command:disabled{border-color:transparent;background-color:transparent}
+.win-ui-dark .win-commandimage{color:#fff}
+.win-ui-dark button:hover:active .win-commandimage{color:#000}
+.win-ui-dark button:disabled .win-commandimage,.win-ui-dark button:disabled:active .win-commandimage{color:rgba(255,255,255,0.4)}
+.win-ui-dark button[aria-selected=true] .win-commandimage,.win-ui-dark button[aria-selected=true]:active .win-commandimage{color:#000}
+.win-ui-dark button[aria-selected=true]:hover .win-commandimage,.win-ui-dark button[aria-selected=true]:hover:active .win-commandimage{color:#fff}
+.win-ui-dark button[aria-selected=true]:disabled .win-commandimage,.win-ui-dark button[aria-selected=true]:disabled:active .win-commandimage{color:rgba(0,0,0,0.4)}
+.win-commandimage{color:#000}
+button:hover:active .win-commandimage{color:#fff}
+button:disabled .win-commandimage,button:disabled:active .win-commandimage{color:rgba(0,0,0,0.4)}
+button[aria-selected=true] .win-commandimage,button[aria-selected=true]:active .win-commandimage{color:#fff}
+button[aria-selected=true]:hover .win-commandimage,button[aria-selected=true]:hover:active .win-commandimage{color:#000}
+button[aria-selected=true]:disabled .win-commandimage,button[aria-selected=true]:disabled:active .win-commandimage{color:#fff}
+.win-ui-dark .win-commandring,.win-ui-dark button:active .win-commandring{background-color:transparent;border-color:#fff}
+.win-ui-dark button:hover .win-commandring{background-color:rgba(255,255,255,0.13);border-color:#fff}
+.win-ui-dark button:hover:active .win-commandring{background-color:#fff;border-color:#fff}
+.win-ui-dark button:disabled .win-commandring,.win-ui-dark button:disabled:active .win-commandring{background-color:transparent;border-color:rgba(255,255,255,0.4)}
+.win-ui-dark button[aria-selected=true] .win-commandring,.win-ui-dark button[aria-selected=true]:active .win-commandring{background-color:#fff;border-color:#fff}
+.win-ui-dark button[aria-selected=true]:hover .win-commandring{background-color:rgba(255,255,255,0.13);border-color:#fff}
+.win-ui-dark button[aria-selected=true]:hover:active .win-commandring{background-color:transparent;border-color:#fff}
+.win-ui-dark button[aria-selected=true]:disabled .win-commandring,.win-ui-dark button[aria-selected=true]:disabled:active .win-commandring{background-color:#fff;border-color:#fff}
+.win-commandring,button:active .win-commandring{background-color:transparent;border-color:#000}
+button:hover .win-commandring{background-color:rgba(0,0,0,0.13);border-color:#000}
+button:hover:active .win-commandring{background-color:#000;border-color:#000}
+button:disabled .win-commandring,button:disabled:active .win-commandring{background-color:transparent;border-color:rgba(0,0,0,0.4)}
+button[aria-selected=true] .win-commandring,button[aria-selected=true]:active .win-commandring{background-color:#000;border-color:#000}
+button[aria-selected=true]:hover .win-commandring{background-color:rgba(0,0,0,0.13);border-color:#000}
+button[aria-selected=true]:hover:active .win-commandring{background-color:rgba(255,255,255,0.13);border-color:#000}
+button[aria-selected=true]:disabled .win-commandring,button[aria-selected=true]:disabled:active .win-commandring{background-color:rgba(0,0,0,0.4);border-color:rgba(0,0,0,0.4)}
+.win-ui-dark button.win-command:disabled .win-label,.win-ui-dark button.win-command:disabled:active .win-label{color:rgba(255,255,255,0.4)}
+button.win-command:disabled .win-label,button.win-command:disabled:active .win-label{color:rgba(0,0,0,0.4)}
+.win-ui-dark .win-appbar{background-color:#000}
+.win-appbar{background-color:#fff}
+.win-flyout,.win-settingsflyout{border-color:#000;background-color:#fff}
+.win-menu button{background-color:transparent;color:#000}
+.win-menu button:hover,.win-menu button:focus,.win-menu button:active{background-color:#dedede}
+.win-menu button:hover:active{color:#fff;background-color:#000}
+.win-menu button:disabled,.win-menu button:disabled:active{background-color:rgba(202,202,202,0.4);color:rgba(0,0,0,0.1)}
+.win-rating .win-star.win-user.win-full,.win-rating .win-star.win-user.win-full.win-disabled{color:#008287}
+.win-rating .win-star.win-tentative.win-full{color:#25bbc4}
+.win-ui-dark .win-rating .win-star.win-average.win-full,.win-ui-dark .win-rating .win-star.win-average.win-full.win-disabled{color:#fff}
+.win-ui-dark .win-rating .win-star.win-empty{color:rgba(255,255,255,0.35)}
+.win-rating .win-star.win-average.win-full,.win-rating .win-star.win-average.win-full.win-disabled{color:#000}
+.win-rating .win-star.win-empty{color:rgba(0,0,0,0.35)}
+.win-ui-dark .win-toggleswitch .win-title{color:rgba(255,255,255,0.6)}
+.win-ui-dark .win-toggleswitch .win-title:disabled{color:rgba(255,255,255,0.4)}
+.win-toggleswitch .win-title{color:rgba(0,0,0,0.6)}
+.win-toggleswitch .win-title:disabled{color:rgba(0,0,0,0.4)}
+.win-ui-dark .win-toggleswitch .win-label{color:#fff}
+.win-ui-dark .win-toggleswitch .win-label:disabled{color:rgba(255,255,255,0.4)}
+.win-toggleswitch .win-label{color:#000}
+.win-toggleswitch .win-label:disabled{color:rgba(0,0,0,0.4)}
+.win-toggleswitch .win-switch::-ms-track{background-color:transparent}
+.win-ui-dark .win-toggleswitch .win-switch::-ms-track{border-color:rgba(255,255,255,0.35)}
+.win-ui-dark .win-toggleswitch .win-switch:disabled::-ms-track{border-color:rgba(255,255,255,0.2)}
+.win-toggleswitch .win-switch::-ms-track{border-color:rgba(0,0,0,0.35)}
+.win-toggleswitch .win-switch:disabled::-ms-track{border-color:rgba(0,0,0,0.2)}
+.win-tooltip{background-color:#fff;border-color:#2a2a2a;color:#000}
+.win-tooltip .win-text-domain{color:rgba(0,0,0,0.6)}
+label{color:rgba(0,0,0,0.6)}
+@media(-ms-high-contrast){::selection,select:focus::-ms-value{background-color:Highlight;color:HighlightText}
+button,input[type=button],input[type=reset],input[type=file]::-ms-browse,input::-ms-clear,input::-ms-reveal,select::-ms-expand,.win-backbutton{background-color:ButtonFace;border-color:ButtonText;color:ButtonText}
+button[type=submit],input[type=submit]{background-color:Highlight;border-color:ButtonText;color:HighlightText}
+button:hover,input[type=button]:hover,input[type=reset]:hover,input::-ms-clear:hover,input::-ms-reveal:hover,input[type=file]::-ms-browse:hover,.win-backbutton:hover{background-color:Highlight;border-color:ButtonText;color:HighlightText}
+button:hover:active,input[type=button]:hover:active,input[type=submit]:hover:active,input[type=reset]:hover:active,input::-ms-clear:hover:active,input::-ms-reveal:hover:active,input[type=file]::-ms-browse:hover:active,.win-backbutton:hover:active{background-color:ButtonText;border-color:ButtonText;color:ButtonFace}
+button:disabled,input[type=button]:disabled,input[type=submit]:disabled,input[type=reset]:disabled,input[type=file]:disabled::-ms-browse,input:disabled::-ms-clear,input:disabled::-ms-reveal,select:disabled::-ms-expand,.win-backbutton:disabled,button:disabled:active,input[type=button]:disabled:active,input[type=submit]:disabled:active,input[type=reset]:disabled:active,input[type=file]:disabled::-ms-browse:active,.win-backbutton:disabled:active{background-color:ButtonFace;border-color:GrayText;color:GrayText}
+input[type=text],input[type=password],input[type=email],input[type=number],input[type=tel],input[type=url],input[type=search],textarea,.win-textarea,select,input::-ms-check{background-color:ButtonFace;border-color:ButtonText;color:ButtonText}
+input:hover::-ms-check{background-color:Highlight}
+input:hover:active::-ms-check{color:ButtonFace;background-color:ButtonText}
+input[type=text]:disabled,input[type=password]:disabled,input[type=email]:disabled,input[type=number]:disabled,input[type=tel]:disabled,input[type=url]:disabled,input[type=search]:disabled,input[type=file]::-ms-value,textarea:disabled,.win-textarea:disabled,select:disabled,input:disabled::-ms-check,input:disabled:active::-ms-check{border-color:GrayText;color:ButtonText;background-color:ButtonFace}
+input:disabled::-ms-check,input:disabled:active::-ms-check,input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:GrayText}
+option,select:disabled option{background-color:transparent}
+option:checked,option:hover,option:active{color:HighlightText;background-color:Highlight}
+a:hover{color:HighLight}
+a:hover:active{color:ButtonText}
+a[disabled],a[disabled]:hover:active{color:GrayText}
+progress{border:1px solid ButtonText;background-color:ButtonFace;color:Highlight}
+progress:indeterminate{border:transparent}
+progress::-ms-fill{border-right:1px solid ButtonText;background-color:Highlight}
+input[type=range]::-ms-track{border:1px solid ButtonText;background-color:ButtonFace}
+input[type=range]:disabled::-ms-track{border-color:GrayText}
+input[type=range]::-ms-fill-lower{background-color:Highlight}
+input[type=range]:disabled::-ms-fill-lower{background-color:transparent}
+input[type=range]::-ms-track,input[type=range]::-ms-ticks-before,input[type=range]::-ms-ticks-after{color:WindowText}
+input[type=range]:disabled::-ms-track,input[type=range]:disabled::-ms-ticks-before,input[type=range]:disabled::-ms-ticks-after{color:GrayText}
+input[type=range]::-ms-thumb{background-color:HighlightText;border-left:1px solid ButtonText;border-right:1px solid ButtonText}
+input[type=range].win-vertical::-ms-thumb{border-left-style:none;border-right-style:none;border-top:1px solid ButtonText;border-bottom:1px solid ButtonText}
+input[type=range]:hover::-ms-thumb{background-color:Highlight;border-color:HighlightText}
+input[type=range]:active::-ms-thumb{background-color:ButtonText;border-color:HighlightText}
+input[type=range]:disabled::-ms-thumb,input[type=range]:disabled:active::-ms-thumb{background-color:GrayText;border-color:GrayText}
+.win-appbar{background-color:ButtonFace;border-color:ButtonText}
+hr.win-command{background-color:ButtonText}
+.win-commandring{background-color:transparent;border-color:ButtonText}
+.win-commandimage{background-color:transparent;color:ButtonText}
+.win-label{background-color:transparent;color:ButtonText}
+.win-flipview .win-navbottom{left:50%;top:100%;margin-left:-35px;margin-top:-35px}
+.win-flipview .win-navbutton{background-color:ButtonFace;color:ButtonText;border:2px solid ButtonText;width:65px;height:35px}
+.win-flipview .win-navbutton:hover{background-color:Highlight;color:HighlightText}
+.win-flipview .win-navbutton:active{background-color:ButtonText;color:ButtonFace}
+.win-flipview .win-navright{margin-left:-65px}
+.win-flyout,.win-settingsflyout{background-color:Window;border-color:WindowText;color:WindowText}
+.win-listview .win-container:hover{background-color:Highlight;outline:Highlight solid 3px;color:HighlightText}
+.win-listview .win-container.win-selected{background-color:Highlight;color:HighlightText}
+.win-listview .win-container.win-selected:hover{background-color:Highlight;color:HighlightText}
+.win-dragoverlay{background-color:Highlight}
+.win-listview .win-groupheader{color:WindowText}
+.win-container.win-selected .win-selectionborder{border:4px solid Highlight}
+.win-container.win-selected:hover .win-selectionborder{border:4px solid Highlight}
+.win-selected .win-selectionbackground{background-color:Highlight}
+.win-selected:hover .win-selectionbackground{background-color:Highlight}
+.win-selectioncheckmark{color:HighlightText}
+.win-listview .win-selectioncheckmarkbackground{border-top-color:Highlight;border-right-color:Highlight;border-left-color:transparent;border-bottom-color:transparent}
+.win-listview .win-selectioncheckmarkbackground:hover{border-top-color:Highlight;border-right-color:Highlight}
+.win-listview.win-rtl .win-selectioncheckmarkbackground{border-top-color:Highlight;border-left-color:Highlight;border-right-color:transparent;border-bottom-color:transparent}
+.win-listview .win-selectionhint{color:WindowText}
+.win-menu button{background-color:Window;color:ButtonText}
+.win-menu button:hover{background-color:Highlight;color:HighlightText}
+.win-menu button:hover:active{background-color:ButtonText;color:ButtonFace}
+.win-menu button:disabled,.win-menu button:disabled:active{background-color:Window;color:InactiveCaptionText}
+.win-menu button.win-command{margin:0 2px}
+.win-menu button.win-command:focus{outline:2px solid}
+.win-rating .win-star:before{content:"\E082"!important}
+.win-rating .win-star.win-user.win-full{color:HighLight}
+.win-rating .win-star.win-tentative.win-full{color:ButtonText}
+.win-rating .win-star.win-empty{color:ButtonFace}
+.win-rating .win-star.win-average.win-full,.win-rating .win-star.win-disabled.win-full{color:GrayText}
+.win-rating .win-star{text-shadow:-1px 0 WindowText,0 1px WindowText,1px 0 WindowText,0 -1px WindowText;font-size:26px}
+.win-rating .win-star.win-average,.win-rating .win-star.win-disabled{text-shadow:-1px 0 GrayText,0 1px GrayText,1px 0 GrayText,0 -1px GrayText}
+.win-toggleswitch .win-switch::-ms-thumb{height:17px}
+.win-toggleswitch .win-switch:disabled::-ms-fill-lower{background-color:GrayText}
+.win-tooltip{background-color:ButtonFace;border-color:ButtonText;color:ButtonText}
+}
+.win-ui-dark button:active .win-commandimage{color:#000}
+.win-ui-dark button[aria-selected=true]:active .win-commandimage{color:#fff}
+.win-ui-dark button:active .win-commandring{background-color:#fff;border-color:#fff}
+.win-ui-dark button[aria-selected=true]:active .win-commandring{background-color:transparent;border-color:#fff}
+button:active .win-commandimage{color:#fff}
+button[aria-selected=true]:active .win-commandimage{color:#000}
+button:active .win-commandring{background-color:#000;border-color:#000}
+button[aria-selected=true]:active .win-commandring{background-color:rgba(255,255,255,0.13);border-color:#000}
+body,.win-type-xx-large,.win-type-x-large,.win-type-large,.win-type-medium,.win-type-small,.win-type-x-small,.win-type-xx-small,input,textarea,.win-textarea,button,select,option{font-family:"Segoe UI","Ebrima","Nirmala UI","Gadugi","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif}

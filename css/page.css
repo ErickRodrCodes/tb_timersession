@@ -1,0 +1,273 @@
+@charset "utf-8";
+html, body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+body{
+	overflow:auto !important;
+}
+h1 {
+	font-weight: normal;
+}
+
+label {
+	display: block;
+    font-size: 1em;
+}
+
+
+
+.clear{clear:both;max-height:1px;}
+body {
+	background-color: #F2F2F2;
+	/*margin-top:30px;*/
+}
+.pad {
+	padding: 4%;
+}
+#metroui-sidebar ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+#metroui-sidebar h2 {
+	padding: 20px 30px;
+	font-size: 1.82em;
+}
+#metroui-sidebar ul li {
+	margin: 0px;
+	padding: 0px;
+}
+#metroui-sidebar ul a {
+	display: block;
+	padding: 3%;
+	padding-left:65px;
+	position:relative;
+}
+
+
+#metroui-sidebar ul a:hover,#metroui-sidebar ul a:active  {
+	background-color:#018A18;
+	color:#FFF;
+}
+
+#metroui-sidebar ul a.selected  {
+	background-color:#04AEDA;
+	color:#FFF;
+}
+
+
+
+#metroui-sidebar ul a span {
+	display: block;
+	font-size: 0.76em;
+}
+
+#metroui-container {
+	height: auto;
+	min-height:100%;
+	width: 100%;
+	position: relative;
+}
+#metroui-sidebar-bg {
+	background-color: #E5E5E5;
+	bottom: 0;
+	position: absolute;
+	left: -1px;
+	top: 0;
+	z-index: -1;
+	border-right: 1px solid #fff;
+}
+
+#metroui-sidebar {
+	float: left;
+	position: relative;
+}
+
+#metroui-sidebar, #metroui-sidebar-bg{
+	width: 25%;
+}
+
+/*
+making metroui-icon absolute in each element of the list of the sidebar 
+this .metroui-icon is ONLY for the sidebar element, is not intended to act for the general metroui-icon set
+
+*/
+
+#metroui-sidebar .metroui-icon{
+    left: 26px;
+    position: absolute;
+	top:13px;
+}
+
+#metroui-content {
+	height: 100%;
+	margin-left: 25.25%;
+}
+#metroui-content-body {
+	position: relative;
+	padding:1em;
+}
+
+
+
+.metroui-image-caption{
+	color: #fff;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.70);
+	font-size: 0.8em;
+	padding: 0.8em 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+
+.metroui-image-caption input{
+	font-size:0.9em !important;
+}
+
+.metroui-image{
+	position:relative;
+	border:1px solid #000;
+}
+
+
+
+
+/*fix file input*/
+input[type="file"] {
+	background-clip: padding-box;
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 11pt;
+    font-weight: 400;
+    line-height: 1.3636;
+    margin: 4px 0;
+    min-height: 28px;
+    min-width: 64px;
+    padding: 0;
+    width: 276px;
+}
+
+/*used only in app.html*/
+.default-profile{
+	width:200px;
+	height:200px;
+	margin:0 auto;
+}
+.info-table{
+	content: ".";
+    display: table;
+    width: 100%
+}
+.info-table .row{
+	display:table-row;
+	width:100%;
+}
+
+.info-table .row .cell-a {
+	float:left;
+	width:49%;
+	display:table-cell;
+	position:relative;
+}
+
+#tab1 input[type=text],#tab1 input[type=password],
+#tab1 input[type=email],#tab1 input[type=number],
+#tab1 input[type=tel],#tab1 input[type=url],
+#tab1 input[type=search], #tab1 input[type=file], #tab1 textarea, 
+#tab1 .win-textarea, #tab1 select{
+	width:98%;
+	min-height:0px !important;
+}
+
+div.fileinputs {
+	position: relative;
+}
+
+.fileinputs input[type=file]{
+	position: relative;
+	text-align: right;
+	-moz-opacity:0 ;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+	float:left;
+	
+}
+
+div.fakefile {
+	float: left;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.fakefile input[type=text]{
+	width:70% !important;
+}
+
+.fakefile input[type=button]{
+	width:20% !important;
+}
+.hide{
+	display:none;
+}
+
+#dashboard-tab, #subdashboard-tab, .fixsubtabs {
+	border:none !important
+}
+.specialty-checkbox ul {
+	padding: 0px;
+	margin: 20px;
+	list-style-type: none;
+}
+.specialty-checkbox ul li {
+	width: 33%;
+	float: left;
+}
+
+.fullwidth{
+	width:100% !important;
+}
+.inline-icon .metroui-icon{
+	float:none;
+	display:inline-block;
+}
+
+.capitalize {
+    text-transform : Capitalize;
+}
+
+a.dialog_link{
+	display:block;
+	width:26px;
+	height:26px;
+	position:relative;
+	padding:0.1em 0.5em;
+}
+
+
+
+a.dialog_link:hover{
+	background-color:#018a18;
+	color : #fff;
+}
+
+.markToggle{
+	background-color:#018a18 !important;
+	color : #fff !important;
+}
+
+.markToggleIcon{
+	background-image:url(../img/metroui-icon-white.png) !important;
+}
+
+.ui-dialog .ui-dialog-titlebar {padding:0.5em 15% !important}
+.ui-progressbar {border-top:2px solid #ccc !important;border-bottom:2px solid #ccc !important;}
