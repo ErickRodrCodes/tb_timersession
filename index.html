@@ -336,7 +336,7 @@ var mytimers = {
           </div>
         </div>
       </div>
-      <div id="page-examples" class="page hide">
+      <div id="page-examples" class="page">
         <div class="tabs">
           <ul>
             <li><a href="#examples">Examples</a></li>
@@ -536,23 +536,26 @@ $(function(){
                 <div style="height:100px;display:block">&nbsp;</div>
               </div>
               <div id="example4">
-                <p>Problem : our client was too happy with the signal bars of the example 3 that asked one more thing : a dialog that announce to the user that if there is not activity registered the session will close. The dialog also should contain a regresive count of 60 seconds before the session closes automatically.</p>
+                <p>Problem : our client was too happy with the signal bars of the example 3 that asked one more thing : a dialog that announce to the user that if there is not activity registered the session will close. The dialog also should contain a regresive count of 60 seconds before the session closes automatically and blink the timer on the window.</p>
                 <h3>Resources</h3>
                 <p>For this example, I'm using a modified version of the jQueryUI theme featuring colors and fonts of the famous metro theme of windows 8. You can get it from from the guys of <a href="http://jquit.com/builder/" target="_blank">jQuit, </a>and my GUI library <a href="#">metroui-mini</a></p>
                 <h3>CSS Code</h3>
                 <p>Remains as example 3</p>
                 <h3>JS Code</h3>
                 <pre class="brush:js">
-// Example 4. Complete interaction using jQuery UI, and custom action per each event:
 var blinker;
 var forceCountDown = 59;
 var countDownInterval;
+var wintitle = document.title;
+var winblink;
 var example4 = {
 	timers : [
 		{
 			time:0,
 			action : function(){
 				$(".sessionTimer").removeClass("metroui-icon-signal0 metroui-icon-signal1 metroui-icon-signal2 metroui-icon-signal3").addClass("metroui-icon-signal3");
+				document.title = wintitle;
+
 			}
 		},
 		{ 
@@ -584,10 +587,9 @@ var example4 = {
 		{
 			// trigger 0% of the action
 			time : 40,
-			action : function(){
-            	window.focus();
+			action : function(){				
 				template = "<div id='modal_pop'><p>For security purposes You will be signed out automatically in "
-                +"<span id='timer'>60</span> seconds due to inactivity</p><p>Close this dialog or "
+				+"<span id='timer'>60</span> seconds due to inactivity</p><p>Close this dialog or "
 				+"press any key to keep your session alive.</p></div>";
 				if($("#modal_pop").length == 0){
 					$(template).dialog({
@@ -610,6 +612,11 @@ var example4 = {
 					resizeDialog();
 					countDownInterval = setInterval(function(){
 						$("#timer").text(forceCountDown);
+						if(document.title == wintitle){
+							document.title = forceCountDown + " seconds to close your session";
+						}else {
+							document.title = wintitle;
+						}
 						forceCountDown--;
 					},1000);
 				}
@@ -624,6 +631,7 @@ var example4 = {
 	logoutUrl			: "./index.html",
 	keepSessionAction	: function(){
 		clearInterval(blinker);
+		clearInterval(winblink);
 		$(".sessionMarker").removeClass('markToggle');
 		$(".sessionTimer").removeClass('markToggleIcon');
 		
@@ -635,7 +643,7 @@ var example4 = {
 $(function(){
 	$("#button-example4").click(function(){
 		$(document).tb_timersession(example4);
-$(this).hide();
+		$(this).hide();
 	});
 }); </pre>
                 <h3>HTML Code</h3>

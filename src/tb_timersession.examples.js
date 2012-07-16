@@ -171,12 +171,16 @@ $(function(){
 var blinker;
 var forceCountDown = 59;
 var countDownInterval;
+var wintitle = document.title;
+var winblink;
 var example4 = {
 	timers : [
 		{
 			time:0,
 			action : function(){
 				$(".sessionTimer").removeClass("metroui-icon-signal0 metroui-icon-signal1 metroui-icon-signal2 metroui-icon-signal3").addClass("metroui-icon-signal3");
+				document.title = wintitle;
+
 			}
 		},
 		{ 
@@ -208,8 +212,7 @@ var example4 = {
 		{
 			// trigger 0% of the action
 			time : 40,
-			action : function(){
-				window.focus();
+			action : function(){				
 				template = "<div id='modal_pop'><p>For security purposes You will be signed out automatically in "
 				+"<span id='timer'>60</span> seconds due to inactivity</p><p>Close this dialog or "
 				+"press any key to keep your session alive.</p></div>";
@@ -234,6 +237,11 @@ var example4 = {
 					resizeDialog();
 					countDownInterval = setInterval(function(){
 						$("#timer").text(forceCountDown);
+						if(document.title == wintitle){
+							document.title = forceCountDown + " seconds to close your session";
+						}else {
+							document.title = wintitle;
+						}
 						forceCountDown--;
 					},1000);
 				}
@@ -248,6 +256,7 @@ var example4 = {
 	logoutUrl			: "./index.html",
 	keepSessionAction	: function(){
 		clearInterval(blinker);
+		clearInterval(winblink);
 		$(".sessionMarker").removeClass('markToggle');
 		$(".sessionTimer").removeClass('markToggleIcon');
 		
@@ -259,6 +268,6 @@ var example4 = {
 $(function(){
 	$("#button-example4").click(function(){
 		$(document).tb_timersession(example4);
-$(this).hide();
+		$(this).hide();
 	});
 });
