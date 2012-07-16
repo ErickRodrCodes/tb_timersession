@@ -57,7 +57,7 @@ if (typeof Object.create !== 'function' ){
 							"padding":"0px",
 							"border-top":"2px solid #ccc"
 						});
-						$('html').css('margin-bottom','100px');
+						$('html,body').css({'margin-bottom':'100px','height':"auto"});
 					}
 					$("<span>"+str+"</span></br>").appendTo("#consolelog");
 					$("#consolelog").scrollTop($("#consolelog").prop('scrollHeight'));
