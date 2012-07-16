@@ -209,6 +209,7 @@ var example4 = {
 			// trigger 0% of the action
 			time : 40,
 			action : function(){
+				window.focus();
 				template = "<div id='modal_pop'><p>For security purposes You will be signed out automatically in "
 				+"<span id='timer'>60</span> seconds due to inactivity</p><p>Close this dialog or "
 				+"press any key to keep your session alive.</p></div>";
