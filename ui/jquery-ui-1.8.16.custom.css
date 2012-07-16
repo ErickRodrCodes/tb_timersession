@@ -672,7 +672,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-dialog-titlebar .ui-state-hover .ui-icon{background-image:url(images/ui-icons_ffffff_1.png) !important;}
 
 /* Slider */
-.ui-slider{background:#d4d4d4;}
+.ui-slider{background:#d4d4d4; border: solid 2px !important}
 .ui-slider .ui-slider-range{background:#3399ff;}
 .ui-slider .ui-state-default{background-color:#000000;}
 .ui-slider .ui-state-active{background-color:#525252 !important;}

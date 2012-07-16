@@ -60,6 +60,7 @@ a{
 .metroui-icon-warning		{background-position:-182px 0px;}
 .metroui-icon-pederastian	{background-position:-208px 0px;}
 .metroui-icon-halthand		{background-position:-234px 0px;}
+.metroui-icon-geardown		{background-position:-260px 0px;}
 
 .metroui-icon-file			{background-position:0px -26px;}
 .metroui-icon-folder		{background-position:-26px -26px;}
@@ -71,6 +72,7 @@ a{
 .metroui-icon-dialog		{background-position:-182px -26px;}
 .metroui-icon-user1			{background-position:-208px -26px;}
 .metroui-icon-user2			{background-position:-234px -26px;}
+.metroui-icon-download		{background-position:-260px -26px;}
 
 .metroui-icon-check			{background-position:0px -52px;}
 .metroui-icon-refresh		{background-position:-26px -52px;}
@@ -82,6 +84,7 @@ a{
 .metroui-icon-lockon		{background-position:-182px -52px;}
 .metroui-icon-lockoff		{background-position:-208px -52px;}
 .metroui-icon-bocine1		{background-position:-234px -52px;}
+.metroui-icon-upload		{background-position:-260px -52px;}
 
 .metroui-icon-home			{background-position:0px -78px;}
 .metroui-icon-recycle		{background-position:-26px -78px;}
@@ -93,6 +96,7 @@ a{
 .metroui-icon-map			{background-position:-182px -78px;}
 .metroui-icon-passin		{background-position:-208px -78px;}
 .metroui-icon-passout		{background-position:-234px -78px;}
+.metroui-icon-cloud			{background-position:-260px -78px;}
 
 .metroui-icon-signal0		{background-position:0px -104px;}
 .metroui-icon-signal1		{background-position:-26px -104px;}
@@ -104,6 +108,7 @@ a{
 .metroui-icon-twitter		{background-position:-182px -104px;}
 .metroui-icon-googleplus	{background-position:-208px -104px;}
 .metroui-icon-linkedin		{background-position:-234px -104px;}
+.metroui-icon-paypal		{background-position:-260px -104px;}
 
 .metroui-icon-circle-check			{background-position:0px -130px;}
 .metroui-icon-circle-plus			{background-position:-26px -130px;}
@@ -115,6 +120,7 @@ a{
 .metroui-icon-circle-boldplus		{background-position:-182px -130px;}
 .metroui-icon-circle-boldcheck		{background-position:-208px -130px;}
 .metroui-icon-circle-boldminus		{background-position:-234px -130px;}
+.metroui-icon-circle-empty			{background-position:-260px -130px;}
 
 .metroui-icon-circle-boldleft		{background-position:0px -156px;}
 .metroui-icon-circle-boldup			{background-position:-26px -156px;}
@@ -126,6 +132,7 @@ a{
 .metroui-icon-circle-arrowup		{background-position:-182px -156px;}
 .metroui-icon-circle-boldrefresh	{background-position:-208px -156px;}
 .metroui-icon-circle-boldcrossclose	{background-position:-234px -156px;}
+.metroui-icon-circle-empty			{background-position:-260px -156px;}
 
 .metroui-icon-circle-backward		{background-position:0px -182px;}
 .metroui-icon-circle-previous		{background-position:-26px -182px;}
@@ -137,6 +144,7 @@ a{
 .metroui-icon-circle-empty			{background-position:-182px -182px;}
 .metroui-icon-circle-empty			{background-position:-208px -182px;}
 .metroui-icon-circle-gear			{background-position:-234px -182px;}
+.metroui-icon-circle-empty			{background-position:-260px -182px;}
 
 .metroui-icon-circle-checkboxes		{background-position:0px -208px;}
 .metroui-icon-circle-empty			{background-position:-26px -208px;}
@@ -148,6 +156,7 @@ a{
 .metroui-icon-circle-boldstop		{background-position:-182px -208px;}
 .metroui-icon-circle-diskette		{background-position:-208px -208px;}
 .metroui-icon-circle-tools			{background-position:-234px -208px;}
+.metroui-icon-circle-empty			{background-position:-260px -208px;}
 
 .metroui-icon-circle-denied			{background-position:0px -234px;}
 .metroui-icon-circle-lightplus		{background-position:-26px -234px;}
@@ -159,6 +168,7 @@ a{
 .metroui-icon-circle-zoom			{background-position:-182px -234px;}
 .metroui-icon-circle-zoomninus		{background-position:-208px -234px;}
 .metroui-icon-circle-search			{background-position:-234px -234px;}
+.metroui-icon-circle-empty			{background-position:-260px -234px;}
 
 /*Very Especific jQueryUI Fixes*/
 

@@ -2,16 +2,16 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>tb_timersession : a jQuery Plugin to manage custom idle client events</title>
+<title>tb_timersession : The jQuery Plugin to manage custom idle client events</title>
 <link rel="stylesheet" type="text/css" href="css/ms-metro-light.css">
 <link rel="stylesheet" type="text/css" href="ui/jquery-ui-1.8.16.custom.css">
 <link rel="stylesheet" type="text/css" href="css/metroui-mini.css">
 <link rel="stylesheet" type="text/css" href="css/page.css">
-<script src="lib/jquery-1.7.2.min.js" 						type="text/javascript"></script>
-<script src="lib/jquery-ui-1.8.16.custom.min.js" 			type="text/javascript"></script>
-<script src="lib/metroui-mini.js" 							type="text/javascript"></script>
-<script src="lib/page.js" 									type="text/javascript"></script>
-<script src="src/jquery.tb_timersession.js" 				type="text/javascript"></script>
+<script src="lib/jquery-1.7.2.min.js"						type="text/javascript"></script>
+<script src="lib/jquery-ui-1.8.16.custom.min.js"			type="text/javascript"></script>
+<script src="lib/metroui-mini.js"							type="text/javascript"></script>
+<script src="lib/page.js"									type="text/javascript"></script>
+<script src="src/jquery.tb_timersession.min.js" 			type="text/javascript"></script>
 <script src="src/tb_timersession.examples.js"				type="text/javascript"></script>
 
 <!--[if lt IE 9]>
@@ -20,6 +20,61 @@
 
 <link href="SyntaxHighlighter/shThemeDefault.css" rel="stylesheet" type="text/css" />
 <link href='SyntaxHighlighter/shCore.css' rel='stylesheet' type='text/css' />
+<style type="text/css">
+.download-bar{
+	height: 120px;
+    position: relative;
+    width: 100%;
+	display: block;
+}
+
+.download-bar ul {
+display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.download-bar li{
+display:block;
+width : 33%;
+float:left;
+}
+
+.download-bar li a{
+display:block;
+background-color:#04AEDA;
+color :#fff;
+padding:5px;
+text-align:center;
+margin:1px
+}
+
+.download-bar li a:hover{
+background-color:#018A18;
+}
+
+.download-bar li a span.metroui-icon{
+	display: block !important;
+	width: 100%;
+	height:26px;
+	left: 48%;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.download-bar li a span{
+display:block;
+font-size:0.8em !important;
+}
+#donate .slider-container {
+	display: block;
+	padding: 5px 30%;
+}
+
+#donate .slider-container .ui-slider-range { background: #04AEDA; height: 0.7em !important; }
+
+</style>
 <script src="SyntaxHighlighter/shCore.js" type="text/javascript"></script>
 <script src="SyntaxHighlighter/shAutoloader.js" type="text/javascript"></script>
 <script src='SyntaxHighlighter/shBrushJScript.js' type='text/javascript'></script>
@@ -35,20 +90,20 @@
 <div id="metroui-container">
   <div id="metroui-sidebar-bg"></div>
   <div id="metroui-sidebar">
-    <h2>tb_timersession 0.1b</h2>
+    <h2>tb_timersession</h2>
     <ul>
       <li><a href="#" class="selected" rel="page-welcome"><span class="metroui-icon metroui-icon-white metroui-icon-home"></span> Home<span>Basic information about tb_timersession</span> </a></li>
       <li><a href="#"  rel="page-startup"><span class="metroui-icon metroui-icon-black metroui-icon-passin"></span>Starting Up<span>How to use tb_timersession</span> </a></li>
       <li><a href="#"  rel="page-settings"><span class="metroui-icon metroui-icon-black metroui-icon-gears1"></span>Settings<span>Options to be used with tb_timersession</span></a></li>
       <li><a href="#"  rel="page-examples"><span class="metroui-icon metroui-icon-black metroui-icon-circle-boldplay"></span>Examples<span> Examples in how to use tb_timersession from the very basic to complex uses</span></a></li>
       <li><a href="#"  rel="page-changelog"><span class="metroui-icon metroui-icon-black metroui-icon-edit"></span>Change Log<span>Latest Changes of tb_timersession</span></a></li>
-      <li><a href="#"  rel="page-national-syndication"><span class="metroui-icon metroui-icon-black metroui-icon-diskette"></span>Download<span>Get the latest version of tb_timersession</span></a></li>
-      <li><a href="#"  rel="page-national-syndication"><span class="metroui-icon metroui-icon-black metroui-icon-card"></span>Donate<span>It's nice to know you recognize my work :D</span></a></li>
+      <li><a href="#"  rel="page-download"><span class="metroui-icon metroui-icon-black metroui-icon-diskette"></span>Download<span>Get the latest version of tb_timersession</span></a></li>
+      <li><a href="#"  rel="page-donate"><span class="metroui-icon metroui-icon-black metroui-icon-paypal"></span>Support tb_timersession!<span>It's nice to know you recognize my work :D</span></a></li>
     </ul>
   </div>
   <div id="metroui-content">
     <div id="metroui-content-body">
-      <div id="page-welcome" class="page hide">
+      <div id="page-welcome" class="page">
         <div class="tabs">
           <ul>
             <li><a href="#welcome">Welcome</a></li>
@@ -56,16 +111,16 @@
           <div id="welcome">
             <h2 class="capitalize">What is tb_timersession?<span></span></h2>
             <p>tb_timersession is a jQuery plugin that allows you to control idle timeouts of absent users. Tb_timersession allows you to generate as many control timers as you need to trigger actions as the time pass by in seconds.</p>
-            <p>The difference with other plugins is that tb_timersession allow you to control as many events you want, not one or two! You don't feel limited by just two events, generate timers depending on the moment you  need it!</p>
+            <p>The difference with other plugins is that tb_timersession allow you to control as many events you want, not just one or two! Feel free to generate timers depending on the moment you  need it!</p>
             <p>Here an example : once you do click to the button below, tb_timersession will start to create the events to fill the progressbar below.</p>
             <div id="dashboard-tab" class="tabs fixsubtabs">
-            	<ul>
-                	<li><a href="#sourcecode1">Source Code</a></li>
-                    <li><a href="#example1">Run Example</a></li>
-                </ul>
-                <div id="sourcecode1">
+              <ul>
+                <li><a href="#sourcecode1">Source Code</a></li>
+                <li><a href="#example1">Run Example</a></li>
+              </ul>
+              <div id="sourcecode1">
                 <p>Double click on the code to select all and copy it, feel free to try it!</p>
-<pre class="brush:js">
+                <pre class="brush:js">
 var example0 = {
 	timers : [
 		{
@@ -106,9 +161,9 @@ var example0 = {
 		},
 	],
 	keepAliveSessionUrl : "http://www.google.com/calendar/feeds/developer-calendar@google.com/public/full?alt=json",
-	logoutUrl 			: "./index.html",
+	logoutUrl			: "./index.html",
 	humanThreshold		: 1,
-	keepSessionAction 	: function(){
+	keepSessionAction	: function(){
 		$("#progressbar").progressbar({value:0});
 	},
 	showConsole			: true,
@@ -118,40 +173,37 @@ var example0 = {
 $(function(){
 	$("#progressbar0").progressbar();
     $("#button-example0").click(function(){
-        $(document).tb_timersession(example0);
-        $(this).hide();
+	$(document).tb_timersession(example0);
+	$(this).hide();
     });
 });
 </pre>
               </div>
-                <div id="example1">
+              <div id="example1">
                 <p>&nbsp;</p>
-               <div id="progressbar1"></div>
-               <p>&nbsp;</p>
-               
-               <p>Note : Once you run the script it will not stop until the last timer object is executed. The timer resets when you press a key or you do click with your mouse.</p>
-<p>Once the time runs out, tb_timersession will load the url assigned in the parameter "logoutUrl&quot;</p>
-<input id="button-example0" type="button" value="Run the demo!">
-                </div>
-                
-            </div> 
+                <div id="progressbar1"></div>
+                <p>&nbsp;</p>
+                <p>Note : Once you run the script it will not stop until the last timer object is executed. The timer resets when you press a key or you do click with your mouse.</p>
+                <p>Once the time runs out, tb_timersession will load the url assigned in the parameter "logoutUrl&quot;</p>
+                <input id="button-example0" type="button" value="Run the demo!">
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div id="page-startup" class="page hide">
-      	<div class="tabs">
-       	  <ul>
-            	<li><a href="#howtouse">Starting Up</a></li>
-            </ul>
-            <div  id="howtouse"> 
-              <h2> </h2>
-              <p>tb_timersession is very easy to use and implement. At the same time, tb_timersession offers to the developer great flexibility in order to generate time events in the adequate time.
-              </p>
-              <h3 class="capitalize">Installation</h3>
-              <p>After you download the most recent copy, decompress the zip file, and copy the tb_timersession flavor you want (non-compressed version and minified version). The files are inside of the directory /src of the compressed file. once you are ready, place your tb_timersession file in your script folder in your production page.</p>
-              <h3 class="capitalize">setup</h3>
-              <p>The simplest way to set up your tb_timersession is to include the javascript file in the &lt;head&gt; of your web page, generate your parameters inside of the &lt;script&gt; tag and initialize the code once the page is loaded, like this:</p>
-              <pre class="brush: html">
+        <div class="tabs">
+          <ul>
+            <li><a href="#howtouse">Starting Up</a></li>
+          </ul>
+          <div  id="howtouse">
+            <h2> </h2>
+            <p>tb_timersession is very easy to use and implement. At the same time, tb_timersession offers to the developer great flexibility in order to generate time events in the adequate time. </p>
+            <h3 class="capitalize">Installation</h3>
+            <p>After you download the most recent copy from <a href="https://github.com/tbogard/tb_timersession" target="_blank">GitHub</a>, get the zip file and  decompress their contents, then copy the tb_timersession flavor you want (non-compressed version and minified version). The files are inside of the directory /src of the compressed file. Once you are ready, place your tb_timersession file in your script folder in your production page.</p>
+            <h3 class="capitalize">setup</h3>
+            <p>The simplest way to set up your tb_timersession is to include the javascript file in the &lt;head&gt; of your web page, generate your parameters inside of the &lt;script&gt; tag and initialize the code once the page is loaded, like this:</p>
+            <pre class="brush: html">
 &lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.tb_timersession.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
 var mytimers = {
@@ -170,124 +222,124 @@ var mytimers = {
 		},
 	],
 	keepAliveSessionUrl : &quot;http://mysite/keepsessionurl&quot;,
-    logoutUrl 			: &quot;./index.html&quot;,
+    logoutUrl			: &quot;./index.html&quot;,
     humanThreshold		: 5,
-    keepSessionAction 	: function(){...}
+    keepSessionAction	: function(){...}
 }
 &lt;/script&gt;
 </pre>
-              <h3 class="capitalize">Initialization</h3>
-              <p>once you have done the setup of your timer event(s), you must add the following code before of the &lt;/script&gt; tag where we wrote the timer events:</p>
-              <pre class="brush: html">$(function(){
+            <h3 class="capitalize">Initialization</h3>
+            <p>once you have done the setup of your timer event(s), you must add the following code before of the &lt;/script&gt; tag where we wrote the timer events:</p>
+            <pre class="brush: html">$(function(){
 	$(document).tb_timersession(mytimers); 
 });</pre>
-              <p>With this, the timer events will be executed once the idle time matches one of the timers.</p>
-            </div>
+            <p>With this, the timer events will be executed once the idle time matches one of the timers.</p>
+            <p>Note : <strong>DO NOT RUN MORE THAN ONE tb_timersession on your page!!!</strong> This plugin is intended to be executed once in your application.</p>
+          </div>
         </div>
       </div>
       <div id="page-settings" class="page hide">
-      	<div class="tabs">
-        <ul>
-        	<li><a href="#list-settings">Settings</a></li>
-        </ul>
-        <div id="list-settings">
-          <p>Here a complete table of the settings that allows tb_timersession to behave in the way you need to manage your idle timeout events:</p>
-          <div>
-            <div class="win-ui-dark">
-              <table border="0" cellpadding="5" cellspacing="1" class="win-content">
-                <tr class="ui-state-active">
-                  <th nowrap  scope="col">Argument</th>
-                  <th nowrap scope="col">Type</th>
-                  <th nowrap scope="col">Default Value and format</th>
-                  <th nowrap  scope="col">Description</th>
+        <div class="tabs">
+          <ul>
+            <li><a href="#list-settings">Settings</a></li>
+          </ul>
+          <div id="list-settings">
+            <p>Here a complete table of the settings that allows tb_timersession to behave in the way you need to manage your idle timeout events:</p>
+            <div>
+              <div class="win-ui-dark">
+                <table border="0" cellpadding="5" cellspacing="1">
+                  <tr class="ui-state-active">
+                    <th align="center" nowrap  scope="col">Argument</th>
+                    <th nowrap scope="col">Type</th>
+                    <th nowrap scope="col">Default Value</th>
+                    <th nowrap  scope="col">Description</th>
                   </tr>
-                <tr>
-                  <td valign="top"><strong>timers</strong></td>
-                  <td align="center" valign="top" nowrap>Array</td>
-                  <td valign="top"><pre class="brush: js">
-	timers : [
-			{
-				time : 10,
-				action : function(){
-					console.log('execution!')
-				}
-			}
-		]
-              </pre>
-                    <p>&nbsp;</p></td>
-                  <td valign="top"><p>timers will make an array of objects who will be the events you want to trigger. </p>
-                    <p>Every object contains two properties:</p>
-                    <ul>
-                      <li><strong>time</strong> (integer/mandatory) : Time in seconds since the idle event starts.</li>
-                      <li><strong>action</strong> (javascript action/optional) : the code of the action you want to execute</li>
-                    </ul></td>
+                  <tr>
+                    <td align="center" valign="top"><strong>timers<br>
+                      (mandatory) </strong></td>
+                    <td align="center" valign="top" nowrap>Array[objects]</td>
+                    <td valign="top"> [{ <br>
+                      time : 10
+                      , <br>
+                      action : function(){
+                      console.log('execution!') <br>
+                      }<br>
+                      }]</td>
+                    <td valign="top"><p>timers will make an array of objects who will be the events you want to trigger. </p>
+                      <p>Every object contains two properties:</p>
+                      <ul>
+                        <li><strong>time</strong> (integer/mandatory) : Time in seconds since the idle event starts.</li>
+                        <li><strong>action</strong> (javascript action/optional) : the code of the action you want to execute</li>
+                      </ul></td>
                   </tr>
-                <tr>
-                  <td valign="top" bgcolor="#666666"><strong>keepAliveSessionUrl</strong></td>
-                  <td align="center" valign="top" nowrap bgcolor="#666666">string(url)</td>
-                  <td valign="top" bgcolor="#666666"><pre class="brush: js">
-	keepAliveSessionUrl : &quot;http://www.google.com&quot;</pre></td>
-                  <td valign="top" bgcolor="#666666">When a human action is detected, tb_timersession will use the value of <strong>keepAliveSessionUrl</strong> to trigger a <strong>$.get</strong> request in order to keep the session of the user alive.</td>
+                  <tr>
+                    <td align="center" valign="top" bgcolor="#666666"><strong>keepAliveSessionUrl<br>
+                      (mandatory) </strong></td>
+                    <td align="center" valign="top" nowrap bgcolor="#666666">string(url)</td>
+                    <td valign="top" bgcolor="#666666"><p>&quot;http://www.google.com&quot;</p></td>
+                    <td valign="top" bgcolor="#666666">When a human action is detected, tb_timersession will use the value of <strong>keepAliveSessionUrl</strong> to trigger a <strong>$.get</strong> request in order to keep the session of the user alive.</td>
                   </tr>
-                <tr>
-                  <td valign="top"><strong>logoutUrl</strong></td>
-                  <td align="center" valign="top" nowrap>string(url)</td>
-                  <td valign="top"><pre class="brush: js">
-	logoutUrl : &quot;http://www.google.com&quot;</pre></td>
-                  <td valign="top">When the last timer is executed, tb_timersession will redirect the content of the page to the url value stored in this parameter.</td>
+                  <tr>
+                    <td align="center" valign="top"><strong>logoutUrl<br>
+                      (mandatory) </strong></td>
+                    <td align="center" valign="top" nowrap>string(url)</td>
+                    <td valign="top"><p>&quot;http://www.google.com&quot;</p></td>
+                    <td valign="top">When the last timer is executed, tb_timersession will redirect the content of the page to the url value stored in this parameter.</td>
                   </tr>
-                <tr>
-                  <td valign="top" bgcolor="#666666"><strong>humanThreshold</strong></td>
-                  <td align="center" valign="top" nowrap bgcolor="#666666">integer</td>
-                  <td valign="top" bgcolor="#666666"><pre class="brush: js">
-	humanThreshold : 10</pre></td>
-                  <td valign="top" bgcolor="#666666">To avoid spamming the server with any human action (with clicks or key strokes), this parameter will allow tb_timersession to wait in seconds for the next call for <strong>keepAliveSessionURL</strong>.</td>
+                  <tr>
+                    <td align="center" valign="top" bgcolor="#666666"><strong>humanThreshold<br>
+                      (optional) </strong></td>
+                    <td align="center" valign="top" nowrap bgcolor="#666666">integer</td>
+                    <td valign="top" bgcolor="#666666">10</td>
+                    <td valign="top" bgcolor="#666666">To avoid spamming the server with any human action (with clicks or key strokes), this parameter will allow tb_timersession to wait in seconds for the next call for <strong>keepAliveSessionURL</strong>.</td>
                   </tr>
-                <tr>
-                  <td valign="top"><strong>keepSessionAction</strong></td>
-                  <td align="center" valign="top" nowrap>Javascript Function</td>
-                  <td valign="top"><pre class="brush: js">keepSessionAction	: function(){}</pre></td>
-                  <td valign="top">A function that allow to the user to execute a custom js function once the timer is reseted as consequence of the human action (with mouse clicks or key strokes)</td>
+                  <tr>
+                    <td align="center" valign="top"><strong>keepSessionAction<br>
+                      (optional) </strong></td>
+                    <td align="center" valign="top" nowrap>Javascript Function</td>
+                    <td valign="top">function(){}</td>
+                    <td valign="top">A function that allow to the user to execute a custom js function once the timer is reseted as consequence of the human action (with mouse clicks or key strokes)</td>
                   </tr>
-                <tr>
-                  <td valign="top" bgcolor="#666666"><strong>showConsole</strong> </td>
-                  <td align="center" valign="top" nowrap bgcolor="#666666">boolean</td>
-                  <td valign="top" bgcolor="#666666"><pre class="brush: js">showConsole : false</pre></td>
-                  <td valign="top" bgcolor="#666666"><p>In case you need to track what actions on the timer are being executed. It will use the <strong>console.log</strong> function to display debug messages related to the internal events of the pluggins and parameters.</p>
-                    <p>Using <strong>showConsole</strong> with older browsers that does not recognise <strong>console.log</strong> as function will result in the automatic execution of the parameter <strong>visualConsole</strong></p></td>
+                  <tr>
+                    <td align="center" valign="top" bgcolor="#666666"><strong>showConsole<br>
+                      (optional) </strong></td>
+                    <td align="center" valign="top" nowrap bgcolor="#666666">boolean</td>
+                    <td valign="top" bgcolor="#666666">false</td>
+                    <td valign="top" bgcolor="#666666"><p>In case you need to track what actions on the timer are being executed. It will use the <strong>console.log</strong> function to display debug messages related to the internal events of the pluggins and parameters.</p>
+                      <p>Using <strong>showConsole</strong> with older browsers that does not recognise <strong>console.log</strong> as function will result in the automatic execution of the parameter <strong>visualConsole</strong></p></td>
                   </tr>
-                <tr>
-                  <td valign="top"><strong>visualConsole</strong></td>
-                  <td align="center" valign="top" nowrap>boolean</td>
-                  <td valign="top"><pre class="brush:js">visualConsole: false</pre></td>
-                  <td valign="top"><strong>visualConsole</strong> will add to the page a division where the events can be seen directly through the page. This will allow you to inspect the elements you store in your <strong>timers </strong>array. This is also a trigger boolean action for fallback browsers that does not recognize <strong>console.log</strong> function if <strong>showConsole</strong> is true.</td>
+                  <tr>
+                    <td align="center" valign="top"><strong>visualConsole<br>
+                      (optional) </strong></td>
+                    <td align="center" valign="top" nowrap>boolean</td>
+                    <td valign="top">false</td>
+                    <td valign="top"><strong>visualConsole</strong> will add to the page a division where the events can be seen directly through the page. This will allow you to inspect the elements you store in your <strong>timers </strong>array. This is also a trigger boolean action for fallback browsers that does not recognize <strong>console.log</strong> function if <strong>showConsole</strong> is true.</td>
                   </tr>
-              </table>
+                </table>
+              </div>
             </div>
           </div>
         </div>
-        </div>
       </div>
       <div id="page-examples" class="page hide">
-      	<div class="tabs">
-        	<ul>
-            	<li><a href="#examples">Examples</a></li>
-            </ul>
-            <div id="examples">
-            	<p>There are here some examples that can allow you to see how flexible is this tool.</p>
-            	<p><strong>Note : Do not run more than one demostration at the same time. Different timers may result in unexpected results.</strong> tb_timersession is intended to be used only <strong>ONCE</strong>.</p>
-                <div class="tabs fixsubtabs">
-                	<ul>
-                        <li><a href="#example1">Example 1</a></li>
-                        <li><a href="#example2">Example 2</a></li>
-                        <li><a href="#example3">Example 3</a></li>
-                        <li><a href="#example4">Example 4</a></li>
-                  </ul>
-                    <div id="example1">
-                    <p>Problem : if the client does not do something in 30 seconds, the user is automatically logged out.</p>
-                   <h3>Code</h3>
-          
-                    <pre class="brush:js">
+        <div class="tabs">
+          <ul>
+            <li><a href="#examples">Examples</a></li>
+          </ul>
+          <div id="examples">
+            <p>There are here some examples that can allow you to see how flexible is this tool.</p>
+            <p><strong>Note : Do not run more than one demostration at the same time. Different timers may result in unexpected results.</strong> tb_timersession is intended to be used only <strong>ONCE</strong>.</p>
+            <div class="tabs fixsubtabs">
+              <ul>
+                <li><a href="#example1">Example 1</a></li>
+                <li><a href="#example2">Example 2</a></li>
+                <li><a href="#example3">Example 3</a></li>
+                <li><a href="#example4">Example 4</a></li>
+              </ul>
+              <div id="example1">
+                <p>Problem : if the client does not do something in 30 seconds, the user is automatically logged out.</p>
+                <h3>Code</h3>
+                <pre class="brush:js">
 var example1 = {
 	timers : [{
 		time: 30
@@ -300,31 +352,23 @@ var example1 = {
 $(function(){
 	$("#button-example1").click(function(){
 		$(document).tb_timersession(example1);
-        $(this).hide();
+	$(this).hide();
 	});
 });</pre>
-<hr>
-                    
-                    <h3>Demostration</h3>
-                    <div id="demo-example1">
-                    <input type="button" id="button-example1" value="Run This Demo">
-                    </div>
-                    
-                  </div>
-                    
-                    
-                    
-                    
-                    
-                    
-                    <!-- -->
-                    
-                    <div id="example2">
-                     <p>Problem : If there is no activity from the user in 60 seconds, the user is automatically logged out. Give a threshold of 15 seconds to send a signal to the server when the user press any key or do mouse click. Also display a message to the user when the user is absent after 15 seconds.</p>
-                    
-                    <h3>Code</h3>
-                    <p>JS Code</p>
-                    <pre class="brush:js">var example2 = {
+                <hr>
+                <h3>Demostration</h3>
+                <div id="demo-example1">
+                  <input type="button" id="button-example1" value="Run This Demo">
+                </div>
+              </div>
+              
+              <!-- -->
+              
+              <div id="example2">
+                <p>Problem : If there is no activity from the user in 60 seconds, the user is automatically logged out. Give a threshold of 15 seconds to send a signal to the server when the user press any key or do mouse click. Also display a message to the user when the user is absent after 15 seconds.</p>
+                <h3>Code</h3>
+                <p>JS Code</p>
+                <pre class="brush:js">var example2 = {
 	timers : [{
 
 		time:0,
@@ -340,48 +384,48 @@ $(function(){
 	},{
 		time:60
 	}],
-	logoutUrl 			: "./index.html",
-	humanThreshold      : 15,
-	showConsole 		: true,
-	visualConsole 		: true
+	logoutUrl			: "./index.html",
+	humanThreshold	    : 15,
+	showConsole		: true,
+	visualConsole		: true
 };
 
 $(function(){
 	$("#button-example2").click(function(){
 		$(document).tb_sessiontimer(example1);
-        $(this).hide()
+	$(this).hide()
 	});	
 });</pre>
-<p>HTML Code</p>
-<pre class="brush:html">
+                <p>HTML Code</p>
+                <pre class="brush:html">
 &lt;div id=&quot;demo-example2&quot;&gt;
     &lt;div style=&quot;display:block&quot;&gt;&lt;span&gt;No messages from the system&lt;/span&gt;&lt;/div&gt;
     &lt;input type=&quot;button&quot; id=&quot;button-example2&quot; value=&quot;Run This Demo&quot;&gt;
 &lt;/div&gt;
 </pre>
-<hr>                
-                    <h3>Demostration</h3>
-                    <div id="demo-example2">
-                    <div style="display:block"><span>No messages from the system</span></div>
-                    <input type="button" id="button-example2" value="Run This Demo">
-                    </div>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                  </div>
-                    <div id="example3">
-                      <p>Problem : There is an icon in the userpanel that indicates the inactivity of the client:</p>
-                      <ul>
-                        <li>3 bars means the user is present</li>
-                        <li>2 bars means the user is absent after 10 seconds of their last action</li>
-                        <li>1 bar means the user is absent after 20 seconds of their last action</li>
-                        <li>empty bars means the user is absent after 30 seconds. It should blink to call attention.</li>
-                        <li>after 40 seconds, the user is automatically logged out.</li>
-                      </ul>
-                      <h3>Code</h3>
-                      <p>CSS Code</p>
-                      <pre class="brush:css">a.dialog_link{
+                <hr>
+                <h3>Demostration</h3>
+                <div id="demo-example2">
+                  <div style="display:block"><span>No messages from the system</span></div>
+                  <input type="button" id="button-example2" value="Run This Demo">
+                </div>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+              <div id="example3">
+                <p>Problem : There is an icon in the userpanel that indicates the inactivity of the client:</p>
+                <ul>
+                  <li>3 bars means the user is present</li>
+                  <li>2 bars means the user is absent after 10 seconds of their last action</li>
+                  <li>1 bar means the user is absent after 20 seconds of their last action</li>
+                  <li>empty bars means the user is absent after 30 seconds. It should blink to call attention.</li>
+                  <li>after 40 seconds, the user is automatically logged out.</li>
+                </ul>
+                <h3>Code</h3>
+                <p>CSS Code</p>
+                <pre class="brush:css">a.dialog_link{
 	display:block;
 	width:26px;
 	height:26px;
@@ -402,8 +446,8 @@ a.dialog_link:hover{
 .markToggleIcon{
 	background-image:url(../img/metroui-icon-white.png) !important;
 }</pre>
-                      <p>JS Code</p>
-<pre class="brush:js">
+                <p>JS Code</p>
+                <pre class="brush:js">
 var blinker;
 var example3 = {
 	timers : [
@@ -446,9 +490,9 @@ var example3 = {
 			time : 40
 		}
 	],
-	keepAliveUrl 		: "http://google.com",
-	logoutUrl 			: "./index.html",
-	keepSessionAction 	: function(){
+	keepAliveUrl		: "http://google.com",
+	logoutUrl			: "./index.html",
+	keepSessionAction	: function(){
 		clearInterval(blinker);
 	},
 	showConsole			: true,
@@ -461,31 +505,29 @@ $(function(){
 	});	
 });
 </pre>
-                      <p>HTML Code</p>
-<pre class="brush:html">
+                <p>HTML Code</p>
+                <pre class="brush:html">
 &lt;div style=&quot;display:block; width:100%&quot;&gt;
 &lt;a title=&quot;Session Timeout&quot; class=&quot;dialog_link&quot; id=&quot;sessionMarker&quot;&gt;&lt;span class=&quot;metroui-icon metroui-icon-blue metroui-icon-signal3&quot; id=&quot;sessionTimer&quot;&gt;&lt;/span&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;br style=&quot;clear:both&quot;&gt;
 &lt;input type=&quot;button&quot; name=&quot;button-example3&quot; id=&quot;button-example3&quot; value=&quot;Run This Demo&quot;&gt;
 </pre>
-                      <hr>
-                      <h3>Demostration</h3>
-                      <div style="display:block; width:100%"><a title="Session Timeout" class="dialog_link" id="sessionMarker"><span class="metroui-icon metroui-icon-blue metroui-icon-signal3" id="sessionTimer"></span></a></div>
-                      <br style="clear:both">
-                      
-                        <input type="button" name="button-example3" id="button-example3" value="Run This Demo">
-                      
-                     <div style="height:100px;display:block">&nbsp;</div>
-                    </div>
-				  <div id="example4">
-                     <p>Problem : our client was too happy with the signal bars of the example 3 that asked one more thing : a dialog that announce to the user that if there is not activity registered the session will close. The dialog also should contain a regresive count of 60 seconds before the session closes automatically.</p>
-                     <h3>Resources</h3>
-                    <p>For this example, I'm using a modified version of the jQueryUI theme featuring colors and fonts of the famous metro theme of windows 8. You can get it from from the guys of <a href="http://jquit.com/builder/" target="_blank">jQuit, </a>and my GUI library <a href="#">metroui-mini</a></p>
-                    <h3>CSS Code</h3>
-                  <p>Remains as example 3</p>
-                    <h3>JS Code</h3>
-                    <pre class="brush:js">
+                <hr>
+                <h3>Demostration</h3>
+                <div style="display:block; width:100%"><a title="Session Timeout" class="dialog_link" id="sessionMarker"><span class="metroui-icon metroui-icon-blue metroui-icon-signal3" id="sessionTimer"></span></a></div>
+                <br style="clear:both">
+                <input type="button" name="button-example3" id="button-example3" value="Run This Demo">
+                <div style="height:100px;display:block">&nbsp;</div>
+              </div>
+              <div id="example4">
+                <p>Problem : our client was too happy with the signal bars of the example 3 that asked one more thing : a dialog that announce to the user that if there is not activity registered the session will close. The dialog also should contain a regresive count of 60 seconds before the session closes automatically.</p>
+                <h3>Resources</h3>
+                <p>For this example, I'm using a modified version of the jQueryUI theme featuring colors and fonts of the famous metro theme of windows 8. You can get it from from the guys of <a href="http://jquit.com/builder/" target="_blank">jQuit, </a>and my GUI library <a href="#">metroui-mini</a></p>
+                <h3>CSS Code</h3>
+                <p>Remains as example 3</p>
+                <h3>JS Code</h3>
+                <pre class="brush:js">
 // Example 4. Complete interaction using jQuery UI, and custom action per each event:
 var blinker;
 var forceCountDown = 59;
@@ -529,7 +571,7 @@ var example4 = {
 			time : 40,
 			action : function(){
 				template = "<div id='modal_pop'><p>For security purposes You will be signed out automatically in "
-				+"<span id='timer'>60</span> seconds due to inactivity</p><p>Close this dialog or "
+                +"<span id='timer'>60</span> seconds due to inactivity</p><p>Close this dialog or "
 				+"press any key to keep your session alive.</p></div>";
 				if($("#modal_pop").length == 0){
 					$(template).dialog({
@@ -562,9 +604,9 @@ var example4 = {
 			time : 100
 		}
 	],
-	keepAliveUrl 		: "http://google.com",
-	logoutUrl 			: "./index.html",
-	keepSessionAction 	: function(){
+	keepAliveUrl		: "http://google.com",
+	logoutUrl			: "./index.html",
+	keepSessionAction	: function(){
 		clearInterval(blinker);
 		$(".sessionMarker").removeClass('markToggle');
 		$(".sessionTimer").removeClass('markToggleIcon');
@@ -577,56 +619,121 @@ var example4 = {
 $(function(){
 	$("#button-example4").click(function(){
 		$(document).tb_timersession(example4);
+$(this).hide();
 	});
 }); </pre>
-                    <h3>HTML Code</h3>
-                    <pre class="brush:html">
+                <h3>HTML Code</h3>
+                <pre class="brush:html">
 &lt;div style=&quot;display:block; width:100%&quot;&gt;
 &lt;a title=&quot;Session Timeout&quot; class=&quot;dialog_link sessionMarker&quot; id=&quot;sessionMarker&quot;&gt;&lt;span class=&quot;metroui-icon metroui-icon-blue metroui-icon-signal3 sessionTimer&quot; id=&quot;sessionTimer&quot;&gt;&lt;/span&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;br style=&quot;clear:both&quot;&gt;
 &lt;input type=&quot;button&quot; name=&quot;button-example4&quot; id=&quot;button-example4&quot; value=&quot;Run This Demo&quot;&gt;
 </pre>
-				    <hr>
-                    <div style="display:block; width:100%"><a title="Session Timeout" class="dialog_link sessionMarker"><span class="metroui-icon metroui-icon-blue metroui-icon-signal3 sessionTimer"></span></a></div>
-                      <br style="clear:both">
-                      
-                        <input type="button" name="button-example4" id="button-example4" value="Run This Demo">
-                      
-                     <div style="height:100px;display:block">&nbsp;</div>
-				  </div>
-                    
+                <hr>
+                <div style="display:block; width:100%"><a title="Session Timeout" class="dialog_link sessionMarker"><span class="metroui-icon metroui-icon-blue metroui-icon-signal3 sessionTimer"></span></a></div>
+                <br style="clear:both">
+                <input type="button" name="button-example4" id="button-example4" value="Run This Demo">
+                <div style="height:100px;display:block">&nbsp;</div>
               </div>
+            </div>
           </div>
         </div>
       </div>
-      <div id="page-changelog" class="page">
-     <div class="tabs">
-        <ul>
+      <div id="page-changelog" class="page hide">
+        <div class="tabs">
+          <ul>
             <li><a href="#changelog">Change Log</a></li>
-        </ul>
-        <div id="changelog">
-          <h2>July 14, 2012 12:35 PM</h2>
-          <ul>
-            <li>Copy &amp; paste GUI Environment from one of my projects to make this page as the main site of the plugin</li>
-            <li>Finished Home Section</li>
-            <li>Finished Starting Up section</li>
-            <li>Finished Settings Section</li>
           </ul>
-          <h2>July 15, 2012 7:12 AM</h2>
-          <ul>
-            <li>Finished Examples section</li>
-            <li>Created GitHub Repository</li>
-            <li>Starting Change Log</li>
-          </ul>
+          <div id="changelog">
+            <h2>July 14, 2012 12:35 PM</h2>
+            <ul>
+              <li>Copy &amp; paste GUI Environment from one of my projects to make this page as the main site of the plugin</li>
+              <li>Added SyntaxHighlighter to the page to render code</li>
+              <li>Finished Home Section</li>
+              <li>Finished Starting Up section</li>
+              <li>Finished Settings Section</li>
+            </ul>
+            <h2>July 15, 2012 7:12 AM</h2>
+            <ul>
+              <li>Finished Examples section</li>
+              <li>Created GitHub Repository</li>
+              <li>Starting Change Log</li>
+              <li>Minified version of tb_timersession.js with limited log options.</li>
+            </ul>
+            <h2>July 15, 2012 11:01 PM</h2>
+            <ul>
+              <li>First Version open to release.</li>
+            </ul>
+          </div>
         </div>
-    </div>
-      
       </div>
-      
-      
-      
-      <div id="page-commentaries" class="page hide"> here page commentaries </div>
+      <div id="page-download" class="page hide">
+        <div class="tabs">
+          <ul>
+            <li><a href="#download">Available download locations</a></li>
+          </ul>
+          <div id="download">
+            <h2 class="capitalize">tb_timersession comes in different flavors!</h2>
+            <ul>
+              <li>The non-compressed version is to be used in <strong>development environments</strong> which  has a robust console output than the minified version.</li>
+              <li>The minified version is to be used in<strong> production environments</strong>. In the next releases is possible that the console feature could be removed.</li>
+              <li>A Public GitHub repository is available to check the latest updates of this plugin</li>
+            </ul>
+            <h2>Download Locations</h2><br>
+
+            <div class="download-bar">
+              <ul>
+                <li><a href="https://github.com/tbogard/tb_timersession/zipball/master"><span class="metroui-icon metroui-icon-white metroui-icon-cloud"></span>Download as a Zip file from GitHub<span>The latest release available and full-documented!</span></a></li>
+                <li><a href="src/jquery.tb_timersession.js"><span class="metroui-icon metroui-icon-white metroui-icon-download"></span>Developer Environment Version<span>Robust Logs available!</span></a></li>
+                <li><a href="src/jquery.tb_timersession.min.js"><span class="metroui-icon metroui-icon-white metroui-icon-geardown"></span>Production Env. Version<span>Ready to work in your site!</span></a></li>                
+              </ul>
+            </div>
+            <p>Do not forget to donate!</p>
+          </div>
+        </div>
+      </div>
+      <div id="page-donate" class="page hide">
+      	<div class="tabs">
+        	<ul>
+            	<li><a href="#donate">Donate</a></li>
+            </ul>
+            <div id="donate">
+            <p>Hello! I'm Erick (T.Bogard) Rodriguez, author of tb_timersession, and yes, the guy in that picture it's me with my wife Marie. I Have to thank God that through many difficulties we are able to create new life! yes, my wife is pregnant :D and as you may know, covering the expenses of our future baby is a must-to-do. So there is motivation to create things like this nice piece of software.            </p>
+            <table width="100%" border="0" cellspacing="5" cellpadding="5">
+              <tr>
+                <td width="50%" align="center"><img src="img/IMG_1918.JPG" alt="" width="261" height="181" aria-busy="false" aria-describedby="fbPhotosSnowliftCaption"></td>
+                <td width="50%" align="center"><img src="file:///C|/Users/Erick/Documents/GitHub/tb_timersession/img/our_baby.jpg" alt="" width="239" height="181"><br>
+                  Our baby is now <span class="nweeks"></span> weeks</td>
+              </tr>
+            </table>
+            <p>I'm happy to say that tb_timersession is a nice piece of software, that why I decided to make it a  <strong>"honor-ware"</strong>, what means that you <strong>pay what you can afford</strong> for it. There is no obligation to pay, but I honor your trust in my software as I trust you spreading the word about this plugin to others as a system of honor.</p>
+            <p>Please pay as much as you can. Just slide the black dot left or right to change the value of your payment : it can be $0.00 (no problem my friend) as it can be $500.00 (crossing fingers :D).            </p>
+            <div class="slider-container">
+              <div id="slider"></div>
+            </div>
+            <p>Again, Thank you for your generosity. I hope you can enjoy this plugin as I enjoyed making it.</p>
+            <p>Your investment is : $<span id="slider-value">0</span></p>
+           
+<form id="paypal-form" style="display: inline" action="https://www.paypal.com/cgi-bin/webscr" method="post" name="_xclick" target="_blank">
+    <input type="hidden" name="item_name" value="tb_timersession">
+    <input type="hidden" name="item_number" id="tracking-input" value="TB_I0001">
+    <input type="hidden" name="amount" id="amount-input" value="30.00">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="no_note" value="1">
+    <input type="hidden" name="business" value="tb.erick.rodriguez@gmail.com">
+    <input type="hidden" name="return" value="http://www.tbogard.com/pay-tb_timersession">
+    <input type="image" style="vertical-align: top" id="paypal-xclick-button" src="img/paypal-click.png">
+</form>
+
+
+             
+
+
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
